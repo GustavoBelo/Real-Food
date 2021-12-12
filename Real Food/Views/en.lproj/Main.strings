@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "Termos de serviço"; ObjectID = "2bc-me-FRL"; */
+"2bc-me-FRL.text" = "Termos de serviço";
+
+/* Class = "UIButton"; configuration.title = "Entrar"; ObjectID = "3T9-Wq-nGq"; */
+"3T9-Wq-nGq.configuration.title" = "Entrar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3T9-Wq-nGq"; */
+"3T9-Wq-nGq.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "7Xe-mj-LbJ"; */
+"7Xe-mj-LbJ.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Xe-mj-LbJ"; */
+"7Xe-mj-LbJ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Senha:"; ObjectID = "9RQ-Mm-KE7"; */
+"9RQ-Mm-KE7.text" = "Senha:";
+
+/* Class = "UILabel"; text = "Senha:"; ObjectID = "BcU-ND-lAO"; */
+"BcU-ND-lAO.text" = "Senha:";
+
+/* Class = "UIButton"; configuration.title = "Cadastrar"; ObjectID = "BoQ-nM-25Z"; */
+"BoQ-nM-25Z.configuration.title" = "Cadastrar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BoQ-nM-25Z"; */
+"BoQ-nM-25Z.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Confirmar senha:"; ObjectID = "CBr-F9-W93"; */
+"CBr-F9-W93.text" = "Confirmar senha:";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "VGJ-lS-IFL"; */
+"VGJ-lS-IFL.text" = "Email:";
+
+/* Class = "UISegmentedControl"; XI7-hy-P88.segmentTitles[0] = "Clientes"; ObjectID = "XI7-hy-P88"; */
+"XI7-hy-P88.segmentTitles[0]" = "Clientes";
+
+/* Class = "UISegmentedControl"; XI7-hy-P88.segmentTitles[1] = "Admin"; ObjectID = "XI7-hy-P88"; */
+"XI7-hy-P88.segmentTitles[1]" = "Admin";
+
+/* Class = "UILabel"; text = "Telefone:"; ObjectID = "ZeG-p9-afe"; */
+"ZeG-p9-afe.text" = "Telefone:";
+
+/* Class = "UIButton"; normalTitle = "Entrar"; ObjectID = "aGX-zP-atA"; */
+"aGX-zP-atA.normalTitle" = "Entrar";
+
+/* Class = "UILabel"; text = "Política de privacidade"; ObjectID = "ahG-AK-DEa"; */
+"ahG-AK-DEa.text" = "Política de privacidade";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "b3E-o6-16D"; */
+"b3E-o6-16D.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "b3E-o6-16D"; */
+"b3E-o6-16D.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Nome:"; ObjectID = "deh-Yl-lMe"; */
+"deh-Yl-lMe.text" = "Nome:";
+
+/* Class = "UILabel"; text = "🍔Real Food"; ObjectID = "ere-gT-nER"; */
+"ere-gT-nER.text" = "🍔Real Food";
+
+/* Class = "UIButton"; normalTitle = "Cadastrar"; ObjectID = "rY8-0r-MGB"; */
+"rY8-0r-MGB.normalTitle" = "Cadastrar";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "tt1-7h-80D"; */
+"tt1-7h-80D.text" = "Email:";
