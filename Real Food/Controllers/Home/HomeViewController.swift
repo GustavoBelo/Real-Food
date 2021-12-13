@@ -28,11 +28,9 @@ class HomeViewController: UIViewController {
     
     var specials: [Dish] = [
         .init(id: "id1", name: "Fried Plan", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: 34),
-        .init(id: "id1", name: "Beans and Garri", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: 34),
+        .init(id: "id1", name: "Beans and Garri", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted, This is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tasted" , calories: 34),
         .init(id: "id1", name: "Feijoada", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: nil)
     ]
-    
-    static let identifier = String(describing: HomeViewController.self)
     var restaurant: String?
     
     override func viewDidLoad() {
@@ -81,5 +79,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            
+        } else {
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = collectionView == popularCollectionView ? populars[indexPath.row] : specials[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        }
+    }
 }

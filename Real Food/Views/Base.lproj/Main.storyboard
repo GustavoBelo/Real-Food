@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qeV-3W-LBM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCC-eD-9jk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -407,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="2836" y="-184"/>
         </scene>
-        <!--Home Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="6Ux-Df-cmu">
             <objects>
-                <navigationController storyboardIdentifier="InitialNC" automaticallyAdjustsScrollViewInsets="NO" id="xDZ-bN-Ams" customClass="HomeNavigationController" customModule="Real_Food" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InitialNC" automaticallyAdjustsScrollViewInsets="NO" id="xDZ-bN-Ams" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZIg-8L-ros">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -731,7 +731,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMl-fx-WUg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="1174.5535714285713"/>
+            <point key="canvasLocation" x="29" y="1512"/>
+        </scene>
+        <!--Dish Detail View Controller-->
+        <scene sceneID="iRF-YV-9JN">
+            <objects>
+                <viewController storyboardIdentifier="DishDetailViewController" id="Vv0-sc-cAH" customClass="DishDetailViewController" customModule="Real_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wma-N0-2GI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdj-f1-jvj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="596"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K6j-Wm-3qu">
+                                <rect key="frame" x="16" y="656" width="382" height="190"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aum-e4-MJ3">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vb-8q-B6g">
+                                                <rect key="frame" x="0.0" y="0.0" width="282" height="24"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.52939999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="PmV-Wu-h4n">
+                                                <rect key="frame" x="282" y="0.0" width="100" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="c8x-LJ-aFh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.877162993" green="0.22861853239999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHn-Py-vZY">
+                                        <rect key="frame" x="0.0" y="40" width="382" height="18"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="kdjhkdjahs">
+                                                <attributes>
+                                                    <color key="NSColor" systemColor="systemGrayColor"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua mesa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KgD-qh-pDe">
+                                        <rect key="frame" x="0.0" y="74" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="C0M-qL-pmF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSW-eU-ZpL">
+                                        <rect key="frame" x="0.0" y="140" width="382" height="50"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="k4C-Ay-mR9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="placeOrderBtntClicked:" destination="Vv0-sc-cAH" eventType="touchUpInside" id="ol4-E3-QC1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jWc-Df-N1b"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jWc-Df-N1b" firstAttribute="bottom" secondItem="K6j-Wm-3qu" secondAttribute="bottom" constant="16" id="5KB-AA-X6w"/>
+                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="top" secondItem="jWc-Df-N1b" secondAttribute="top" id="C18-Vl-9NE"/>
+                            <constraint firstItem="K6j-Wm-3qu" firstAttribute="leading" secondItem="jWc-Df-N1b" secondAttribute="leading" constant="16" id="F6P-EL-Zum"/>
+                            <constraint firstItem="K6j-Wm-3qu" firstAttribute="top" secondItem="Hdj-f1-jvj" secondAttribute="bottom" constant="16" id="LXu-2S-UNf"/>
+                            <constraint firstItem="jWc-Df-N1b" firstAttribute="trailing" secondItem="K6j-Wm-3qu" secondAttribute="trailing" constant="16" id="bND-Ka-dTK"/>
+                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="trailing" secondItem="jWc-Df-N1b" secondAttribute="trailing" id="oBu-y8-rvG"/>
+                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="leading" secondItem="jWc-Df-N1b" secondAttribute="leading" id="xb1-rI-G0n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomStackView" destination="K6j-Wm-3qu" id="0xZ-qG-l0g"/>
+                        <outlet property="caloriesLbl" destination="PmV-Wu-h4n" id="sMZ-3V-fK8"/>
+                        <outlet property="descriptionLbl" destination="kHn-Py-vZY" id="sO5-lh-XjR"/>
+                        <outlet property="dishImageView" destination="Hdj-f1-jvj" id="nKD-iW-fNb"/>
+                        <outlet property="tableField" destination="KgD-qh-pDe" id="Sy9-3P-2eX"/>
+                        <outlet property="titleLbl" destination="4Vb-8q-B6g" id="NX6-W9-XPx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qN-wM-iJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="1511.3839285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hdc-Hu-KlG">
@@ -749,7 +856,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lye-nI-xos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884" y="1175"/>
+            <point key="canvasLocation" x="-884" y="1512"/>
         </scene>
     </scenes>
     <resources>
@@ -766,6 +873,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

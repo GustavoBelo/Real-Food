@@ -9,7 +9,6 @@ import UIKit
 import AVFoundation
 
 class CatchRestaurantNameViewController: UIViewController {
-    static let identifier = String(describing: CatchRestaurantNameViewController.self)
     @IBOutlet weak var welcomeText: UILabel!
     @IBOutlet weak var scannerView: UIView!
     private var scanner: Scanner?
@@ -33,8 +32,8 @@ extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDeleg
                                didOutput metadataObjects: [AVMetadataObject],
                                from connection: AVCaptureConnection) {
         self.scanner?.metadataOutput(output,
-                                      didOutput: metadataObjects,
-                                      from: connection)
+                                     didOutput: metadataObjects,
+                                     from: connection)
     }
     
     func cameraView() -> UIView {
