@@ -17,6 +17,8 @@
 		AA29FE042766829200729D50 /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA29FE022766829200729D50 /* DishPortraitCollectionViewCell.xib */; };
 		AA29FE062766843000729D50 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29FE052766843000729D50 /* Dish.swift */; };
 		AA29FE0827669DBE00729D50 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29FE0727669DBE00729D50 /* RegisterViewController.swift */; };
+		AA4A8F80276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A8F7E276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift */; };
+		AA4A8F81276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4A8F7F276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib */; };
 		AA59D6EA27625278007219BE /* CatchRestaurantNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59D6E927625278007219BE /* CatchRestaurantNameViewController.swift */; };
 		AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */; };
 		AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */; };
@@ -46,6 +48,8 @@
 		AA29FE022766829200729D50 /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
 		AA29FE052766843000729D50 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		AA29FE0727669DBE00729D50 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AA4A8F7E276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA4A8F7F276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		AA59D6E927625278007219BE /* CatchRestaurantNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchRestaurantNameViewController.swift; sourceTree = "<group>"; };
 		AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		AA189B712763D0CD005B650E /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				AA4A8F7D276781B500AA9A95 /* DishLandscapeCollectionViewCell */,
 				AA29FE002766824000729D50 /* DishPortraitCollectionViewCell */,
 				AA189B722763D10B005B650E /* CategoryCollectionViewCell */,
 			);
@@ -150,6 +155,15 @@
 				AA29FE022766829200729D50 /* DishPortraitCollectionViewCell.xib */,
 			);
 			path = DishPortraitCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AA4A8F7D276781B500AA9A95 /* DishLandscapeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AA4A8F7E276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift */,
+				AA4A8F7F276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib */,
+			);
+			path = DishLandscapeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		AA7BEFE82762A42700E89996 /* Models */ = {
@@ -326,6 +340,7 @@
 				AAA8C08D27610EB3001CB8C8 /* LaunchScreen.storyboard in Resources */,
 				AA29FE042766829200729D50 /* DishPortraitCollectionViewCell.xib in Resources */,
 				AAA8C08A27610EB3001CB8C8 /* Assets.xcassets in Resources */,
+				AA4A8F81276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib in Resources */,
 				AAA8C08827610EB3001CB8C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +407,7 @@
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
 				AA189B66276387BF005B650E /* HomeViewController.swift in Sources */,
+				AA4A8F80276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */,
 				AAA8C0A027614739001CB8C8 /* Scanner.swift in Sources */,
 				AAA8C08327610EB3001CB8C8 /* SceneDelegate.swift in Sources */,
