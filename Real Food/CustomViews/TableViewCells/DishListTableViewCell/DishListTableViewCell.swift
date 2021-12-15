@@ -14,7 +14,15 @@ class DishListTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLbl: UILabel!
     
     func setup(dish: Dish) {
-        dish.setup(title: titleLbl, imageView: dishImageView, calories: nil, description: descriptionLbl)
+        dish.setup(title: titleLbl,
+                   imageView: dishImageView,
+                   calories: nil,
+                   description: descriptionLbl)
     }
     
+    func setup(order: Order) {
+        dishImageView.kf.setImage(with: order.dish?.image?.asUrl)
+        titleLbl.text = order.dish?.name
+        descriptionLbl.text = order.name
+    }
 }

@@ -23,6 +23,8 @@
 		AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A8F832767C76E00AA9A95 /* DishDetailViewController.swift */; };
 		AA4A8F862767D5B700AA9A95 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A8F852767D5B700AA9A95 /* UIViewController+Extension.swift */; };
 		AA59D6EA27625278007219BE /* CatchRestaurantNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59D6E927625278007219BE /* CatchRestaurantNameViewController.swift */; };
+		AA5B14FB276A6AD90009B7A1 /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B14FA276A6AD90009B7A1 /* ListOrdersViewController.swift */; };
+		AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B14FC276A6D460009B7A1 /* Order.swift */; };
 		AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */; };
 		AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */; };
 		AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */; };
@@ -59,6 +61,8 @@
 		AA4A8F832767C76E00AA9A95 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 		AA4A8F852767D5B700AA9A95 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AA59D6E927625278007219BE /* CatchRestaurantNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchRestaurantNameViewController.swift; sourceTree = "<group>"; };
+		AA5B14FA276A6AD90009B7A1 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
+		AA5B14FC276A6D460009B7A1 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AAA8C07D27610EB3001CB8C8 /* Real Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,12 +197,21 @@
 			path = DishDetail;
 			sourceTree = "<group>";
 		};
+		AA5B14F9276A6AC50009B7A1 /* ListOrders */ = {
+			isa = PBXGroup;
+			children = (
+				AA5B14FA276A6AD90009B7A1 /* ListOrdersViewController.swift */,
+			);
+			path = ListOrders;
+			sourceTree = "<group>";
+		};
 		AA7BEFE82762A42700E89996 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				AAD9D1FC2762D5BF006A174C /* OnboardingSlide.swift */,
 				AA189B772763D2AA005B650E /* DishCategory.swift */,
 				AA29FE052766843000729D50 /* Dish.swift */,
+				AA5B14FC276A6D460009B7A1 /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 		AA7BEFE92762A43200E89996 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA5B14F9276A6AC50009B7A1 /* ListOrders */,
 				AA2F3C2227691C1000927C55 /* ListDishes */,
 				AA4A8F822767C74600AA9A95 /* DishDetail */,
 				AA189B5F2763873C005B650E /* Home */,
@@ -445,6 +459,7 @@
 				AA59D6EA27625278007219BE /* CatchRestaurantNameViewController.swift in Sources */,
 				AA29FE062766843000729D50 /* Dish.swift in Sources */,
 				AA189B782763D2AA005B650E /* DishCategory.swift in Sources */,
+				AA5B14FB276A6AD90009B7A1 /* ListOrdersViewController.swift in Sources */,
 				AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */,
 				AA29FE032766829200729D50 /* DishPortraitCollectionViewCell.swift in Sources */,
 				AA189B6827638805005B650E /* InitialViewController.swift in Sources */,
@@ -453,6 +468,7 @@
 				AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */,
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
+				AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */,
 				AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */,
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
 				AA189B66276387BF005B650E /* HomeViewController.swift in Sources */,
