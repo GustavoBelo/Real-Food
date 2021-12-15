@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCC-eD-9jk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qeV-3W-LBM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -454,7 +454,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-zK-VQa">
-                                <rect key="frame" x="129.5" y="730" width="155.5" height="26"/>
+                                <rect key="frame" x="149.5" y="730" width="115.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
                                 <color key="currentPageIndicatorTintColor" red="0.877162993" green="0.22861853239999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -595,6 +595,7 @@
                                                         <cells/>
                                                         <connections>
                                                             <outlet property="dataSource" destination="9B2-c8-vEV" id="9Fc-u3-mJW"/>
+                                                            <outlet property="delegate" destination="9B2-c8-vEV" id="Zss-Q7-yqa"/>
                                                         </connections>
                                                     </collectionView>
                                                 </subviews>
@@ -838,7 +839,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qN-wM-iJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="1511.3839285714284"/>
+            <point key="canvasLocation" x="1988" y="1511"/>
+        </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="lf9-sB-yD8">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="E8E-zv-PZ2" customClass="ListDishesViewController" customModule="Real_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Vn-OY-THY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gp9-tr-OUh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="E8E-zv-PZ2" id="i90-kO-BjR"/>
+                                    <outlet property="delegate" destination="E8E-zv-PZ2" id="WFn-30-AmA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3xp-Rg-uBS"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3xp-Rg-uBS" firstAttribute="bottom" secondItem="Gp9-tr-OUh" secondAttribute="bottom" id="DBJ-K1-1xB"/>
+                            <constraint firstItem="Gp9-tr-OUh" firstAttribute="top" secondItem="3xp-Rg-uBS" secondAttribute="top" id="Hr2-FA-fyA"/>
+                            <constraint firstItem="Gp9-tr-OUh" firstAttribute="leading" secondItem="3xp-Rg-uBS" secondAttribute="leading" id="LbQ-Oy-5il"/>
+                            <constraint firstItem="3xp-Rg-uBS" firstAttribute="trailing" secondItem="Gp9-tr-OUh" secondAttribute="trailing" id="XWg-gz-lkU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Gp9-tr-OUh" id="Ggh-jH-gbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LL4-0i-piB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="1511"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hdc-Hu-KlG">

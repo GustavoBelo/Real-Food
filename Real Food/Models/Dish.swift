@@ -18,15 +18,15 @@ struct Dish {
     
     func setup(title: UILabel,
                imageView: UIImageView,
-               calories: UILabel,
+               calories: UILabel?,
                description: UILabel ) {
         let dish = self
         title.text = dish.name
         imageView.kf.setImage(with: dish.image?.asUrl)
         if dish.calories != nil {
-            calories.text = dish.formattedCalories
+            calories?.text = dish.formattedCalories
         } else {
-            calories.isHidden.toggle()
+            calories?.isHidden.toggle()
         }
         description.text = dish.description
     }

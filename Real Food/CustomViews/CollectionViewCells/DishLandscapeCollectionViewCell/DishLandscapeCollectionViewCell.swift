@@ -8,9 +8,6 @@
 import UIKit
 
 class DishLandscapeCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = String(describing: DishLandscapeCollectionViewCell.self)
-    
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
