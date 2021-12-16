@@ -25,6 +25,7 @@
 		AA59D6EA27625278007219BE /* CatchRestaurantNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59D6E927625278007219BE /* CatchRestaurantNameViewController.swift */; };
 		AA5B14FB276A6AD90009B7A1 /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B14FA276A6AD90009B7A1 /* ListOrdersViewController.swift */; };
 		AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5B14FC276A6D460009B7A1 /* Order.swift */; };
+		AA5B5BDA276B87200042585F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5B5BD9276B87200042585F /* GoogleService-Info.plist */; };
 		AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */; };
 		AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */; };
 		AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		AA59D6E927625278007219BE /* CatchRestaurantNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchRestaurantNameViewController.swift; sourceTree = "<group>"; };
 		AA5B14FA276A6AD90009B7A1 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		AA5B14FC276A6D460009B7A1 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		AA5B5BD9276B87200042585F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AAA8C07D27610EB3001CB8C8 /* Real Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 				AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */,
 				AAA8C08927610EB3001CB8C8 /* Assets.xcassets */,
 				AAA8C08E27610EB3001CB8C8 /* Info.plist */,
+				AA5B5BD9276B87200042585F /* GoogleService-Info.plist */,
 			);
 			path = "Real Food";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA189B762763D140005B650E /* CategoryCollectionViewCell.xib in Resources */,
+				AA5B5BDA276B87200042585F /* GoogleService-Info.plist in Resources */,
 				AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */,
 				AAA8C08D27610EB3001CB8C8 /* LaunchScreen.storyboard in Resources */,
 				AA29FE042766829200729D50 /* DishPortraitCollectionViewCell.xib in Resources */,

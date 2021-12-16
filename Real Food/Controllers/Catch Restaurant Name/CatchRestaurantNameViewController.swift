@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
 class CatchRestaurantNameViewController: UIViewController {
     @IBOutlet weak var welcomeText: UILabel!
@@ -19,12 +20,7 @@ class CatchRestaurantNameViewController: UIViewController {
         
         self.scanner = Scanner(withDelegate: self)
         scanner?.requestCaptureSessionStartRunning()
-    }
-    
-    func handleCode(code: String) {
-        print(code)
-    }
-    
+    }    
 }
 
 extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDelegate, ScannerDelegate {
@@ -45,7 +41,6 @@ extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDeleg
     }
     
     func scanCompleted(withCode code: String) {
-        print(code)
         let controller = storyboard?.instantiateViewController(withIdentifier: HomeViewController.identifier) as! UIViewController
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .coverVertical

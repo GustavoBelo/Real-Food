@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var specialCollectionView: UICollectionView!
+    
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            let controller = InitialViewController.instantiate()
+            self.navigationController?.setViewControllers([controller], animated:true)            
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
+      
+    }
     
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Africa Dish", image: "https://picsum.photos/100/200"),
