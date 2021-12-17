@@ -12,16 +12,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var specialCollectionView: UICollectionView!
+    @IBOutlet weak var logOutOrLoginButton: UIBarButtonItem!
     
-    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        do {
-            try Auth.auth().signOut()
-            let controller = InitialViewController.instantiate()
-            self.navigationController?.setViewControllers([controller], animated:true)            
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+    @IBAction func logOutOrLoginPressed(_ sender: UIBarButtonItem) {
+        if Auth.auth().currentUser?.email != nil {
+            do {
+                try Auth.auth().signOut()
+                self.goToInitial()
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
+        } else {
+            self.goToInitial()
         }
-      
     }
     
     var categories: [DishCategory] = [
@@ -50,6 +53,13 @@ class HomeViewController: UIViewController {
         registerCells()
         restaurant = navigationController?.title
         title = restaurant
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if Auth.auth().currentUser?.email == nil {
+            logOutOrLoginButton.title = "Entrar"
+        }
     }
     
     private func registerCells() {

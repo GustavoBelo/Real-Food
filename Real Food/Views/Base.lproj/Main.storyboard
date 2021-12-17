@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCC-eD-9jk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qeV-3W-LBM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -701,7 +701,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="lrv-cZ-h96"/>
                         <barButtonItem key="leftBarButtonItem" title="Sair" id="2sT-kx-9kq">
                             <connections>
-                                <action selector="logOutPressed:" destination="9B2-c8-vEV" id="aQk-XU-yQ9"/>
+                                <action selector="logOutOrLoginPressed:" destination="9B2-c8-vEV" id="wfb-ju-Roc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart.circle.fill" catalog="system" id="mP1-o2-FQw">
@@ -713,6 +713,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryCollectionView" destination="xMj-QG-Xst" id="Sp1-e1-yMw"/>
+                        <outlet property="logOutOrLoginButton" destination="2sT-kx-9kq" id="wiN-Og-djg"/>
                         <outlet property="popularCollectionView" destination="csU-VN-3fk" id="nX1-r6-fbk"/>
                         <outlet property="specialCollectionView" destination="wRa-11-8OW" id="sCW-bS-MwQ"/>
                     </connections>

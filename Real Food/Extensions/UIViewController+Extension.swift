@@ -17,4 +17,9 @@ extension UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: identifier) as! Self
     }
+    
+    func goToInitial() {
+        let controller = InitialViewController.instantiate()
+        self.navigationController?.setViewControllers([controller], animated: true)
+    }
 }
