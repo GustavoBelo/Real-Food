@@ -9,6 +9,14 @@ import UIKit
 import SwiftUI
 
 struct Dish {
+    struct K {
+        static let dish = "dish"
+        static let id = "id"
+        static let name = "name"
+        static let image = "image"
+        static let description = "description"
+        static let calories = "calories"
+    }
     let id, name, image, description: String?
     let calories: Int?
     

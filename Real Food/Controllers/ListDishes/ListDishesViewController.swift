@@ -11,6 +11,7 @@ class ListDishesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var category: DishCategory!
+    var restaurant: String!
     
     //get from each category
     
@@ -44,6 +45,7 @@ extension ListDishesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = DishDetailViewController.instantiate()
+        controller.restaurant = restaurant
         controller.dish = dishes[indexPath.row]
         navigationController?.pushViewController(controller, animated: true)
     }

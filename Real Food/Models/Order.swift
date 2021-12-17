@@ -8,6 +8,7 @@
 import Foundation
 
 struct Order {
+    static let identifierGroup = String(describing: Self.self)+"s"
     let id, name: String?
     let dish: Dish?
 }
