@@ -8,12 +8,12 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var nextButton: UIButton!
     
-    var slides: [OnboardingSlide] = []
-    var currentPage = 0 {
+    private var slides: [OnboardingSlide] = []
+    private var currentPage = 0 {
         didSet {  
             pageControl.currentPage = currentPage
             if currentPage == slides.count - 1 {

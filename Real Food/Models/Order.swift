@@ -8,7 +8,15 @@
 import Foundation
 
 struct Order {
-    static let identifierGroup = String(describing: Self.self)+"s"
-    let id, name: String?
+    struct K {
+        static let identifierGroup = identifier + "s"
+        static let identifier = "Order"
+        static let restaurant = "restaurant"
+        static let name = "name"
+        static let date = "date"
+        static let table = "table"
+        static let sender = "sender"
+    }
+    let name, sender: String?
     let dish: Dish?
 }

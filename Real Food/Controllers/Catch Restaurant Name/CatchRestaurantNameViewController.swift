@@ -10,8 +10,8 @@ import AVFoundation
 import Firebase
 
 class CatchRestaurantNameViewController: UIViewController {
-    @IBOutlet weak var welcomeText: UILabel!
-    @IBOutlet weak var scannerView: UIView!
+    @IBOutlet private weak var welcomeText: UILabel!
+    @IBOutlet private weak var scannerView: UIView!
     private var scanner: Scanner?
     
     override func viewDidLoad() {

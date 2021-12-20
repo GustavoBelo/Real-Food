@@ -8,10 +8,10 @@
 import UIKit
 
 class DishPortraitCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var dishImageView: UIImageView!
-    @IBOutlet weak var caloriesLbl: UILabel!
-    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet private weak var titleLbl: UILabel!
+    @IBOutlet private weak var dishImageView: UIImageView!
+    @IBOutlet private weak var caloriesLbl: UILabel!
+    @IBOutlet private weak var descriptionLbl: UILabel!
     
     func setup(dish: Dish) {
         dish.setup(title: titleLbl,

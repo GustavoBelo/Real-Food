@@ -9,10 +9,10 @@ import UIKit
 import Firebase
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
-    @IBOutlet weak var popularCollectionView: UICollectionView!
-    @IBOutlet weak var specialCollectionView: UICollectionView!
-    @IBOutlet weak var logOutOrLoginButton: UIBarButtonItem!
+    @IBOutlet private weak var categoryCollectionView: UICollectionView!
+    @IBOutlet private weak var popularCollectionView: UICollectionView!
+    @IBOutlet private weak var specialCollectionView: UICollectionView!
+    @IBOutlet private weak var logOutOrLoginButton: UIBarButtonItem!
     
     @IBAction func logOutOrLoginPressed(_ sender: UIBarButtonItem) {
         if Auth.auth().currentUser?.email != nil {
@@ -25,6 +25,11 @@ class HomeViewController: UIViewController {
         } else {
             self.goToInitial()
         }
+    }
+    @IBAction func CartPressed(_ sender: UIBarButtonItem) {
+        let controller = ListOrdersViewController.instantiate()
+        controller.restaurant = restaurant
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     var categories: [DishCategory] = [

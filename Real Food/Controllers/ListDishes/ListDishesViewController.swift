@@ -8,7 +8,7 @@
 import UIKit
 
 class ListDishesViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     var category: DishCategory!
     var restaurant: String!

@@ -8,10 +8,10 @@
 import UIKit
 
 class DishLandscapeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var dishImageView: UIImageView!
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var caloriesLbl: UILabel!
+    @IBOutlet private weak var dishImageView: UIImageView!
+    @IBOutlet private weak var titleLbl: UILabel!
+    @IBOutlet private weak var descriptionLbl: UILabel!
+    @IBOutlet private weak var caloriesLbl: UILabel!
     
     func setup(dish: Dish) {
         dish.setup(title: titleLbl,
@@ -19,5 +19,5 @@ class DishLandscapeCollectionViewCell: UICollectionViewCell {
                    calories: caloriesLbl,
                    description: descriptionLbl)
     }
-
+    
 }

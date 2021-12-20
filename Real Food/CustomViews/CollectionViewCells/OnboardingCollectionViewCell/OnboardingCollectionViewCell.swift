@@ -8,9 +8,9 @@
 import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var slideImageView: UIImageView!
-    @IBOutlet weak var slideTitleLabel: UILabel!
-    @IBOutlet weak var slideDescriptionLabel: UILabel!
+    @IBOutlet private weak var slideImageView: UIImageView!
+    @IBOutlet private weak var slideTitleLabel: UILabel!
+    @IBOutlet private weak var slideDescriptionLabel: UILabel!
     
     func setup(_ slide: OnboardingSlide) {
         slideImageView.image = slide.image
