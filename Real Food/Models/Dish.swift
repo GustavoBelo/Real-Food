@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-struct Dish {
+struct Dish: Equatable {
     struct K {
         static let dish = "dish"
         static let id = "id"
@@ -31,7 +31,7 @@ struct Dish {
         let dish = self
         title.text = dish.name
         imageView.kf.setImage(with: dish.image?.asUrl)
-        if dish.calories != nil {
+        if dish.calories != nil && dish.calories != 0 {
             calories?.text = dish.formattedCalories
         } else {
             calories?.isHidden.toggle()

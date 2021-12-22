@@ -10,8 +10,8 @@ import Firebase
 
 class HomeViewController: UIViewController {
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
-    @IBOutlet private weak var popularCollectionView: UICollectionView!
-    @IBOutlet private weak var specialCollectionView: UICollectionView!
+    @IBOutlet weak var popularCollectionView: UICollectionView!
+    @IBOutlet weak var specialCollectionView: UICollectionView!
     @IBOutlet private weak var logOutOrLoginButton: UIBarButtonItem!
     
     @IBAction func logOutOrLoginPressed(_ sender: UIBarButtonItem) {
@@ -32,6 +32,8 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    let db = Firestore.firestore()
+    
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Africa Dish", image: "https://picsum.photos/100/200"),
         .init(id: "id1", name: "Africa Dish 2", image: "https://picsum.photos/100/200"),
@@ -40,17 +42,9 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "Africa Dish 5", image: "https://picsum.photos/100/200")
     ]
     
-    var populars: [Dish] = [
-        .init(id: "id1", name: "Garri", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: nil),
-        .init(id: "id1", name: "Indomie", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: 34),
-        .init(id: "id1", name: "Pizza", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: 34)
-    ]
+    var populars: [Dish] = []
+    var specials: [Dish] = []
     
-    var specials: [Dish] = [
-        .init(id: "id1", name: "Fried Plan", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: 34),
-        .init(id: "id1", name: "Beans and Garri", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted, This is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tasted" , calories: 34),
-        .init(id: "id1", name: "Feijoada", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: nil)
-    ]
     var restaurant: String?
     
     override func viewDidLoad() {
@@ -58,6 +52,8 @@ class HomeViewController: UIViewController {
         registerCells()
         restaurant = navigationController?.title
         title = restaurant
+        loadPopularDishes()
+        loadSpecialDishes()
     }
     
     override func viewWillAppear(_ animated: Bool) {

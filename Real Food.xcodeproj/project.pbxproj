@@ -40,6 +40,8 @@
 		AAE006232768D08C009AD3BE /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */; };
 		AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */; };
 		AAEB586B2763E06F00247D5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB586A2763E06F00247D5A /* CardView.swift */; };
+		AAFB656D27737CEA00B0970C /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB656C27737CEA00B0970C /* Restaurants.swift */; };
+		AAFB656F2773B1B100B0970C /* PopulateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB656E2773B1B100B0970C /* PopulateHomeViewController.swift */; };
 		D5083C681E5F2E3578FA0A71 /* Pods_Real_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
 		AAEB586A2763E06F00247D5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AAFB656C27737CEA00B0970C /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
+		AAFB656E2773B1B100B0970C /* PopulateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateHomeViewController.swift; sourceTree = "<group>"; };
 		FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +137,7 @@
 			children = (
 				AA189B65276387BF005B650E /* HomeViewController.swift */,
 				AA189B6727638804005B650E /* InitialViewController.swift */,
+				AAFB656E2773B1B100B0970C /* PopulateHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				AA189B772763D2AA005B650E /* DishCategory.swift */,
 				AA29FE052766843000729D50 /* Dish.swift */,
 				AA5B14FC276A6D460009B7A1 /* Order.swift */,
+				AAFB656C27737CEA00B0970C /* Restaurants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 			files = (
 				AA59D6EA27625278007219BE /* CatchRestaurantNameViewController.swift in Sources */,
 				AA29FE062766843000729D50 /* Dish.swift in Sources */,
+				AAFB656D27737CEA00B0970C /* Restaurants.swift in Sources */,
 				AA189B782763D2AA005B650E /* DishCategory.swift in Sources */,
 				AA5B14FB276A6AD90009B7A1 /* ListOrdersViewController.swift in Sources */,
 				AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */,
@@ -472,6 +479,7 @@
 				AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */,
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
+				AAFB656F2773B1B100B0970C /* PopulateHomeViewController.swift in Sources */,
 				AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */,
 				AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */,
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
