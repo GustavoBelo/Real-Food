@@ -6,25 +6,22 @@
 //
 
 import UIKit
+import Firebase
 
 class ListDishesViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
+    private let db = Firestore.firestore()
+    
     var category: DishCategory!
     var restaurant: String!
-    
-    //get from each category
-    
-    var dishes: [Dish] = [
-        .init(id: "id1", name: "Fried Plan", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: 34),
-        .init(id: "id1", name: "Beans and Garri", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted, This is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tastedThis is the best i have ever tasted" , calories: 34),
-        .init(id: "id1", name: "Feijoada", image:"https://picsum.photos/100/200", description: "This is the best i have ever tasted" , calories: nil)
-    ]
+    var dishes: [Dish] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = category.name
         registerCells()
+        loadDishes()
     }
     
     private func registerCells() {
@@ -48,5 +45,55 @@ extension ListDishesViewController: UITableViewDelegate, UITableViewDataSource {
         controller.restaurant = restaurant
         controller.dish = dishes[indexPath.row]
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension ListDishesViewController {
+    private func loadDishes() {
+        db.collection(Restaurants.identifierGroup)
+            .addSnapshotListener { (querySnapshot, error) in
+                if let e = error {
+                    print(e)
+                } else if let snapshotDocuments = querySnapshot?.documents {
+                    self.addDishes(with: snapshotDocuments)
+                }
+            }
+    }
+    
+    private func addDishes(with snapshotDocuments: [QueryDocumentSnapshot]) {
+        for doc in snapshotDocuments {
+            let data = doc.data()
+            let restaurant = doc.documentID
+            if self.restaurant == restaurant {
+                guard let dishes = data[Restaurants.dishes] as? [String : Any] else { return }
+                guard let dataBaseCategory = data[Restaurants.categories] as? [String : Any] else { return }
+                addDishesIntoTableView(withRequest: dataBaseCategory, dishes: dishes)
+            }
+        }
+    }
+    
+    private func addDishesIntoTableView(withRequest dataBaseCategory: [String : Any], dishes: [String : Any]) {
+        for it in dataBaseCategory {
+            guard let newIt = it.value as? [String : Any] else { return }
+            if newIt[DishCategory.K.id] as? String == self.category.id {
+                for dish in dishes {
+                    if category.dishes.contains(dish.key) {
+                        guard let newDish = dish.value as? [String : Any] else { return }
+                        let finalDish = Dish(id: dish.key,
+                                             name: newDish[Dish.K.name] as? String,
+                                             image: newDish[Dish.K.image] as? String,
+                                             description: newDish[Dish.K.description] as? String,
+                                             calories: newDish[Dish.K.calories] as? Int ?? 0)
+                        
+                        self.dishes.append(finalDish)
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData(
+                                with: .simple(duration: 0.75, direction: .rotation3D(type: .spiderMan),
+                                              constantDelay: 0))
+                        }
+                    }
+                }
+            }
+        }
     }
 }

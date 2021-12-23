@@ -8,5 +8,12 @@
 import Foundation
 
 struct DishCategory {
+    struct K {
+        static let dishes = "dishes"
+        static let id = "id"
+        static let name = "name"
+        static let image = "image"
+    }
     let id, name, image: String?
+    let dishes: [String?]
 }

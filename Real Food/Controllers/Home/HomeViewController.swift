@@ -34,13 +34,7 @@ class HomeViewController: UIViewController {
     
     private let db = Firestore.firestore()
     
-    var categories: [DishCategory] = [
-        .init(id: "id1", name: "Africa Dish", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish 2", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish 3", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish 4", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Africa Dish 5", image: "https://picsum.photos/100/200")
-    ]
+    var categories: [DishCategory] = []
     
     private var populars: [Dish] = []
     private var specials: [Dish] = []
@@ -54,6 +48,7 @@ class HomeViewController: UIViewController {
         title = restaurant
         loadPopularDishes()
         loadSpecialDishes()
+        loadCategories()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -129,6 +124,40 @@ extension HomeViewController {
             }
     }
     
+    private func loadCategories() {
+        db.collection(Restaurants.identifierGroup)
+            .addSnapshotListener { (querySnapshot, error) in
+                if let e = error {
+                    print(e)
+                } else if let snapshotDocuments = querySnapshot?.documents {
+                    self.addCategories(with: snapshotDocuments)
+                }
+            }
+    }
+    
+    private func addCategories(with snapshotDocuments: [QueryDocumentSnapshot]) {
+        for doc in snapshotDocuments {
+            let data = doc.data()
+            let restaurant = doc.documentID
+            if self.restaurant == restaurant {
+                guard let categories = data[Restaurants.categories] as? [String : Any] else { return }
+                for category in categories  {
+                    guard let fullCategory = category.value as? [String : Any] else { return }
+                    let newCategory = DishCategory(id: fullCategory[DishCategory.K.id] as? String,
+                                                   name: fullCategory[DishCategory.K.name] as? String,
+                                                   image: fullCategory[DishCategory.K.image] as? String,
+                                                   dishes: fullCategory[DishCategory.K.dishes] as! [String])
+                    
+                    
+                    self.categories.append(newCategory)
+                    DispatchQueue.main.async {
+                        self.categoryCollectionView.reloadData()
+                    }
+                }
+            }
+        }
+    }
+    
     private func loadSpecialDishes() {
         db.collection(Restaurants.identifierGroup)
             .addSnapshotListener { (querySnapshot, error) in
@@ -147,11 +176,11 @@ extension HomeViewController {
             if self.restaurant == restaurant {
                 let category = data[Restaurants.populars] as! [String]
                 guard let dishes = data[Restaurants.dishes] as? [String : Any] else { return }
-            
+                
                 for dish in dishes {
                     if category.contains(dish.key) {
                         guard let newDish = dish.value as? [String : Any] else { return }
-                        let finalDish = Dish(id: newDish[Dish.K.id] as? String,
+                        let finalDish = Dish(id: dish.key,
                                              name: newDish[Dish.K.name] as? String,
                                              image: newDish[Dish.K.image] as? String,
                                              description: newDish[Dish.K.description] as? String,
@@ -174,11 +203,11 @@ extension HomeViewController {
             if self.restaurant == restaurant {
                 let category = data[Restaurants.specials] as! [String]
                 guard let dishes = data[Restaurants.dishes] as? [String : Any] else { return }
-            
+                
                 for dish in dishes {
                     if category.contains(dish.key) {
                         guard let newDish = dish.value as? [String : Any] else { return }
-                        let finalDish = Dish(id: newDish[Dish.K.id] as? String,
+                        let finalDish = Dish(id: dish.key,
                                              name: newDish[Dish.K.name] as? String,
                                              image: newDish[Dish.K.image] as? String,
                                              description: newDish[Dish.K.description] as? String,

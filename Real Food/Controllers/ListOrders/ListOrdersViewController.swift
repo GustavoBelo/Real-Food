@@ -57,7 +57,6 @@ class ListOrdersViewController: UIViewController {
                    sender == Auth.auth().currentUser?.email {
                     let table = order[Order.K.table] as? String
                     guard let dish = order[Dish.K.dish] as? [String : Any] else { return }
-                    
                     let dishOrder = Dish(id: dish[Dish.K.id] as? String,
                                          name: dish[Dish.K.name] as? String,
                                          image: dish[Dish.K.image] as? String,
