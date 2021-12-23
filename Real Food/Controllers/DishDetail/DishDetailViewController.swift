@@ -84,7 +84,7 @@ class DishDetailViewController: UIViewController {
                     Dish.K.image: dish.image!,
                     Dish.K.description : dish.description!,
                     Dish.K.name : dish.name!,
-                    Dish.K.calories : dish.calories
+                    Dish.K.calories : dish.calories ?? 0
                 ]
             ]
         ]) { (error) in

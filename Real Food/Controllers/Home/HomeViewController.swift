@@ -10,11 +10,11 @@ import Firebase
 
 class HomeViewController: UIViewController {
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
-    @IBOutlet weak var popularCollectionView: UICollectionView!
-    @IBOutlet weak var specialCollectionView: UICollectionView!
+    @IBOutlet private weak var popularCollectionView: UICollectionView!
+    @IBOutlet private weak var specialCollectionView: UICollectionView!
     @IBOutlet private weak var logOutOrLoginButton: UIBarButtonItem!
     
-    @IBAction func logOutOrLoginPressed(_ sender: UIBarButtonItem) {
+    @IBAction private func logOutOrLoginPressed(_ sender: UIBarButtonItem) {
         if Auth.auth().currentUser?.email != nil {
             do {
                 try Auth.auth().signOut()
@@ -26,13 +26,13 @@ class HomeViewController: UIViewController {
             self.goToInitial()
         }
     }
-    @IBAction func CartPressed(_ sender: UIBarButtonItem) {
+    @IBAction private func CartPressed(_ sender: UIBarButtonItem) {
         let controller = ListOrdersViewController.instantiate()
         controller.restaurant = restaurant
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    let db = Firestore.firestore()
+    private let db = Firestore.firestore()
     
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Africa Dish", image: "https://picsum.photos/100/200"),
@@ -42,8 +42,8 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "Africa Dish 5", image: "https://picsum.photos/100/200")
     ]
     
-    var populars: [Dish] = []
-    var specials: [Dish] = []
+    private var populars: [Dish] = []
+    private var specials: [Dish] = []
     
     var restaurant: String?
     
@@ -113,6 +113,84 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             controller.restaurant = restaurant
             controller.dish = collectionView == popularCollectionView ? populars[indexPath.row] : specials[indexPath.row]
             navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+}
+
+extension HomeViewController {
+    private func loadPopularDishes() {
+        db.collection(Restaurants.identifierGroup)
+            .addSnapshotListener { (querySnapshot, error) in
+                if let e = error {
+                    print(e)
+                } else if let snapshotDocuments = querySnapshot?.documents {
+                    self.addPopularDishes(with: snapshotDocuments)
+                }
+            }
+    }
+    
+    private func loadSpecialDishes() {
+        db.collection(Restaurants.identifierGroup)
+            .addSnapshotListener { (querySnapshot, error) in
+                if let e = error {
+                    print(e)
+                } else if let snapshotDocuments = querySnapshot?.documents {
+                    self.addSpecialDishes(with: snapshotDocuments)
+                }
+            }
+    }
+    
+    private func addPopularDishes(with snapshotDocuments: [QueryDocumentSnapshot]) {
+        for doc in snapshotDocuments {
+            let data = doc.data()
+            let restaurant = doc.documentID
+            if self.restaurant == restaurant {
+                let category = data[Restaurants.populars] as! [String]
+                guard let dishes = data[Restaurants.dishes] as? [String : Any] else { return }
+            
+                for dish in dishes {
+                    if category.contains(dish.key) {
+                        guard let newDish = dish.value as? [String : Any] else { return }
+                        let finalDish = Dish(id: newDish[Dish.K.id] as? String,
+                                             name: newDish[Dish.K.name] as? String,
+                                             image: newDish[Dish.K.image] as? String,
+                                             description: newDish[Dish.K.description] as? String,
+                                             calories: newDish[Dish.K.calories] as? Int ?? 0)
+                        
+                        self.populars.append(finalDish)
+                        DispatchQueue.main.async {
+                            self.popularCollectionView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func addSpecialDishes(with snapshotDocuments: [QueryDocumentSnapshot]) {
+        for doc in snapshotDocuments {
+            let data = doc.data()
+            let restaurant = doc.documentID
+            if self.restaurant == restaurant {
+                let category = data[Restaurants.specials] as! [String]
+                guard let dishes = data[Restaurants.dishes] as? [String : Any] else { return }
+            
+                for dish in dishes {
+                    if category.contains(dish.key) {
+                        guard let newDish = dish.value as? [String : Any] else { return }
+                        let finalDish = Dish(id: newDish[Dish.K.id] as? String,
+                                             name: newDish[Dish.K.name] as? String,
+                                             image: newDish[Dish.K.image] as? String,
+                                             description: newDish[Dish.K.description] as? String,
+                                             calories: newDish[Dish.K.calories] as? Int ?? 0)
+                        
+                        self.specials.append(finalDish)
+                        DispatchQueue.main.async {
+                            self.specialCollectionView.reloadData()
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -41,7 +41,6 @@
 		AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */; };
 		AAEB586B2763E06F00247D5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB586A2763E06F00247D5A /* CardView.swift */; };
 		AAFB656D27737CEA00B0970C /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB656C27737CEA00B0970C /* Restaurants.swift */; };
-		AAFB656F2773B1B100B0970C /* PopulateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB656E2773B1B100B0970C /* PopulateHomeViewController.swift */; };
 		D5083C681E5F2E3578FA0A71 /* Pods_Real_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +83,6 @@
 		AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
 		AAEB586A2763E06F00247D5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AAFB656C27737CEA00B0970C /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
-		AAFB656E2773B1B100B0970C /* PopulateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateHomeViewController.swift; sourceTree = "<group>"; };
 		FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,7 +135,6 @@
 			children = (
 				AA189B65276387BF005B650E /* HomeViewController.swift */,
 				AA189B6727638804005B650E /* InitialViewController.swift */,
-				AAFB656E2773B1B100B0970C /* PopulateHomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -281,15 +278,14 @@
 		AAA8C07F27610EB3001CB8C8 /* Real Food */ = {
 			isa = PBXGroup;
 			children = (
-				AA7BEFEE2762B0A900E89996 /* Extensions */,
-				AA7BEFEA2762A60000E89996 /* CustomViews */,
-				AA7BEFE92762A43200E89996 /* Controllers */,
-				AA7BEFE82762A42700E89996 /* Models */,
-				AAA8C09427610EF0001CB8C8 /* Views */,
 				AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */,
 				AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */,
-				AAA8C08927610EB3001CB8C8 /* Assets.xcassets */,
 				AAA8C08E27610EB3001CB8C8 /* Info.plist */,
+				AA7BEFEE2762B0A900E89996 /* Extensions */,
+				AA7BEFE82762A42700E89996 /* Models */,
+				AAA8C09427610EF0001CB8C8 /* Views */,
+				AA7BEFE92762A43200E89996 /* Controllers */,
+				AAA8C08927610EB3001CB8C8 /* Assets.xcassets */,
 				AA5B5BD9276B87200042585F /* GoogleService-Info.plist */,
 			);
 			path = "Real Food";
@@ -298,6 +294,7 @@
 		AAA8C09427610EF0001CB8C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA7BEFEA2762A60000E89996 /* CustomViews */,
 				AAA8C08B27610EB3001CB8C8 /* LaunchScreen.storyboard */,
 				AAA8C08627610EB3001CB8C8 /* Main.storyboard */,
 			);
@@ -479,7 +476,6 @@
 				AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */,
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
-				AAFB656F2773B1B100B0970C /* PopulateHomeViewController.swift in Sources */,
 				AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */,
 				AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */,
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
