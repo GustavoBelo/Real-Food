@@ -15,9 +15,10 @@ struct Dish: Equatable {
         static let name = "name"
         static let image = "image"
         static let description = "description"
+        static let ARModel = "ARModel"
         static let calories = "calories"
     }
-    let id, name, image, description: String?
+    let id, name, image, description, ARModel: String?
     let calories: Int?
     
     var formattedCalories: String {

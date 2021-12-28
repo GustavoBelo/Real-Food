@@ -835,6 +835,16 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQR-Wz-fTI">
+                                <rect key="frame" x="261.5" y="60" width="136.5" height="31"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Veja o prato aqui!"/>
+                                <connections>
+                                    <action selector="ARDishBtnClicked:" destination="Vv0-sc-cAH" eventType="touchUpInside" id="pg6-cK-SvU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jWc-Df-N1b"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -842,13 +852,16 @@
                             <constraint firstItem="jWc-Df-N1b" firstAttribute="bottom" secondItem="K6j-Wm-3qu" secondAttribute="bottom" constant="16" id="5KB-AA-X6w"/>
                             <constraint firstItem="Hdj-f1-jvj" firstAttribute="top" secondItem="jWc-Df-N1b" secondAttribute="top" id="C18-Vl-9NE"/>
                             <constraint firstItem="K6j-Wm-3qu" firstAttribute="leading" secondItem="jWc-Df-N1b" secondAttribute="leading" constant="16" id="F6P-EL-Zum"/>
+                            <constraint firstItem="jWc-Df-N1b" firstAttribute="trailing" secondItem="MQR-Wz-fTI" secondAttribute="trailing" constant="16" id="GI3-RW-dWe"/>
                             <constraint firstItem="K6j-Wm-3qu" firstAttribute="top" secondItem="Hdj-f1-jvj" secondAttribute="bottom" constant="16" id="LXu-2S-UNf"/>
                             <constraint firstItem="jWc-Df-N1b" firstAttribute="trailing" secondItem="K6j-Wm-3qu" secondAttribute="trailing" constant="16" id="bND-Ka-dTK"/>
+                            <constraint firstItem="MQR-Wz-fTI" firstAttribute="top" secondItem="jWc-Df-N1b" secondAttribute="top" constant="16" id="hpV-LO-ZlC"/>
                             <constraint firstItem="Hdj-f1-jvj" firstAttribute="trailing" secondItem="jWc-Df-N1b" secondAttribute="trailing" id="oBu-y8-rvG"/>
                             <constraint firstItem="Hdj-f1-jvj" firstAttribute="leading" secondItem="jWc-Df-N1b" secondAttribute="leading" id="xb1-rI-G0n"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ARDishBtn" destination="MQR-Wz-fTI" id="gG8-3G-YtO"/>
                         <outlet property="bottomStackView" destination="K6j-Wm-3qu" id="0xZ-qG-l0g"/>
                         <outlet property="caloriesLbl" destination="PmV-Wu-h4n" id="sMZ-3V-fK8"/>
                         <outlet property="descriptionLbl" destination="kHn-Py-vZY" id="sO5-lh-XjR"/>
@@ -913,6 +926,72 @@
             </objects>
             <point key="canvasLocation" x="-884" y="1512"/>
         </scene>
+        <!--Dish View Controller-->
+        <scene sceneID="djE-1j-JV8">
+            <objects>
+                <viewController storyboardIdentifier="ARDishViewController" id="1HN-A3-avf" customClass="ARDishViewController" customModule="Real_Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FRy-6f-i7o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PEI-c2-ho7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUn-i2-rse">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="824.5"/>
+                                    </arscnView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aponte a câmera para o local indicado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppx-km-JiG">
+                                        <rect key="frame" x="0.0" y="834.5" width="414" height="27.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nsC-8E-QK3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="top" secondItem="FRy-6f-i7o" secondAttribute="top" id="ooh-S3-7hx"/>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="leading" secondItem="nsC-8E-QK3" secondAttribute="leading" id="x9c-F3-8Ur"/>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="trailing" secondItem="nsC-8E-QK3" secondAttribute="trailing" id="xWS-fa-a8N"/>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="bottom" secondItem="nsC-8E-QK3" secondAttribute="bottom" id="yCL-3X-zVa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VIV-RY-6PJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hKz-Xj-sYx">
+                            <connections>
+                                <action selector="done:" destination="1HN-A3-avf" id="ncj-pV-FBT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sceneView" destination="TUn-i2-rse" id="xJj-fI-xIn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKD-97-fHZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3957.971014492754" y="1510.7142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t9f-su-cHJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iq6-iJ-pcK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FlT-1h-piI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1HN-A3-avf" kind="relationship" relationship="rootViewController" id="fDb-7L-Zwp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrI-ai-bUu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3047.826086956522" y="1510.7142857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="appIcon" width="512" height="512"/>
@@ -923,6 +1002,9 @@
         <namedColor name="BrandLightBlue">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -934,6 +1016,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

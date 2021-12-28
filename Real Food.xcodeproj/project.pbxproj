@@ -37,6 +37,8 @@
 		AAA8C0A027614739001CB8C8 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C09F27614739001CB8C8 /* Scanner.swift */; };
 		AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9D1FC2762D5BF006A174C /* OnboardingSlide.swift */; };
 		AAD9D2002762D85E006A174C /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9D1FF2762D85E006A174C /* OnboardingCollectionViewCell.swift */; };
+		AAD9D3102775F83200F7BA11 /* ARDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD9D30F2775F83200F7BA11 /* ARDishViewController.swift */; };
+		AAD9D3122775FE4D00F7BA11 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD9D3112775FE4D00F7BA11 /* art.scnassets */; };
 		AAE006232768D08C009AD3BE /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */; };
 		AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */; };
 		AAEB586B2763E06F00247D5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB586A2763E06F00247D5A /* CardView.swift */; };
@@ -79,6 +81,8 @@
 		AAA8C09F27614739001CB8C8 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		AAD9D1FC2762D5BF006A174C /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		AAD9D1FF2762D85E006A174C /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAD9D30F2775F83200F7BA11 /* ARDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDishViewController.swift; sourceTree = "<group>"; };
+		AAD9D3112775FE4D00F7BA11 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
 		AAEB586A2763E06F00247D5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 		AA7BEFE92762A43200E89996 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAD9D30E2775F81700F7BA11 /* ARDish */,
 				AA5B14F9276A6AC50009B7A1 /* ListOrders */,
 				AA2F3C2227691C1000927C55 /* ListDishes */,
 				AA4A8F822767C74600AA9A95 /* DishDetail */,
@@ -285,6 +290,7 @@
 				AA7BEFE82762A42700E89996 /* Models */,
 				AAA8C09427610EF0001CB8C8 /* Views */,
 				AA7BEFE92762A43200E89996 /* Controllers */,
+				AAD9D3112775FE4D00F7BA11 /* art.scnassets */,
 				AAA8C08927610EB3001CB8C8 /* Assets.xcassets */,
 				AA5B5BD9276B87200042585F /* GoogleService-Info.plist */,
 			);
@@ -307,6 +313,14 @@
 				AAD9D1FF2762D85E006A174C /* OnboardingCollectionViewCell.swift */,
 			);
 			path = OnboardingCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AAD9D30E2775F81700F7BA11 /* ARDish */ = {
+			isa = PBXGroup;
+			children = (
+				AAD9D30F2775F83200F7BA11 /* ARDishViewController.swift */,
+			);
+			path = ARDish;
 			sourceTree = "<group>";
 		};
 		AAE0061F2768D03B009AD3BE /* TableViewCells */ = {
@@ -404,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA189B762763D140005B650E /* CategoryCollectionViewCell.xib in Resources */,
+				AAD9D3122775FE4D00F7BA11 /* art.scnassets in Resources */,
 				AA5B5BDA276B87200042585F /* GoogleService-Info.plist in Resources */,
 				AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */,
 				AAA8C08D27610EB3001CB8C8 /* LaunchScreen.storyboard in Resources */,
@@ -481,6 +496,7 @@
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
 				AA189B66276387BF005B650E /* HomeViewController.swift in Sources */,
 				AA4A8F80276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift in Sources */,
+				AAD9D3102775F83200F7BA11 /* ARDishViewController.swift in Sources */,
 				AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */,
 				AAA8C0A027614739001CB8C8 /* Scanner.swift in Sources */,
 				AAA8C08327610EB3001CB8C8 /* SceneDelegate.swift in Sources */,

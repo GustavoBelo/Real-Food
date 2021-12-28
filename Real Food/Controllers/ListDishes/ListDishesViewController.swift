@@ -83,6 +83,7 @@ extension ListDishesViewController {
                                              name: newDish[Dish.K.name] as? String,
                                              image: newDish[Dish.K.image] as? String,
                                              description: newDish[Dish.K.description] as? String,
+                                             ARModel: newDish[Dish.K.ARModel] as? String,
                                              calories: newDish[Dish.K.calories] as? Int ?? 0)
                         
                         self.dishes.append(finalDish)

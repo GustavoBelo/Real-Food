@@ -12,6 +12,7 @@ import Firebase
 class DishDetailViewController: UIViewController {
     private let db = Firestore.firestore()
     
+    @IBOutlet weak var ARDishBtn: UIButton!
     @IBOutlet private weak var dishImageView: UIImageView!
     @IBOutlet private weak var titleLbl: UILabel!
     @IBOutlet private weak var caloriesLbl: UILabel!
@@ -22,7 +23,15 @@ class DishDetailViewController: UIViewController {
     var restaurant: String!
     private var dateField = Date().timeIntervalSince1970
     
-    @IBAction func placeOrderBtntClicked(_ sender: UIButton) {
+    @IBAction func ARDishBtnClicked(_ sender: UIButton) {
+        if dish.ARModel != nil {
+            let controller = ARDishViewController.instantiate()
+            controller.dish = dish.ARModel
+            controller.restaurant = restaurant
+            navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    @IBAction func placeOrderBtnClicked(_ sender: UIButton) {
         if let sender = Auth.auth().currentUser?.email,
            let table = tableField.text,
            let restaurant = restaurant,
@@ -48,6 +57,9 @@ class DishDetailViewController: UIViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         populateView()
+        if dish.ARModel == nil {
+            ARDishBtn.isHidden.toggle()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -61,6 +61,7 @@ class ListOrdersViewController: UIViewController {
                                          name: dish[Dish.K.name] as? String,
                                          image: dish[Dish.K.image] as? String,
                                          description: dish[Dish.K.description] as? String,
+                                         ARModel: dish[Dish.K.ARModel] as? String,
                                          calories: dish[Dish.K.calories] as? Int ?? 0)
                     
                     let newOrder = Order(name: table,
