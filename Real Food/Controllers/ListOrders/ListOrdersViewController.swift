@@ -93,6 +93,7 @@ extension ListOrdersViewController: UITableViewDelegate, UITableViewDataSource {
         let controller = DishDetailViewController.instantiate()
         controller.restaurant = restaurant
         controller.dish = orders[indexPath.row].dish
+        print(controller.dish, "cu")
         navigationController?.pushViewController(controller, animated: true)
     }
 }

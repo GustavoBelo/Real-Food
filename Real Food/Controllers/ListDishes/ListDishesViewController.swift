@@ -53,7 +53,7 @@ extension ListDishesViewController {
         db.collection(Restaurants.identifierGroup)
             .addSnapshotListener { (querySnapshot, error) in
                 if let e = error {
-                    print(e)
+                    print(e.localizedDescription)
                 } else if let snapshotDocuments = querySnapshot?.documents {
                     self.addDishes(with: snapshotDocuments)
                 }

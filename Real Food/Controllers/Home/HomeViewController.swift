@@ -116,6 +116,7 @@ extension HomeViewController {
     private func loadPopularDishes() {
         db.collection(Restaurants.identifierGroup)
             .addSnapshotListener { (querySnapshot, error) in
+                self.populars = []
                 if let e = error {
                     print(e)
                 } else if let snapshotDocuments = querySnapshot?.documents {
@@ -127,6 +128,7 @@ extension HomeViewController {
     private func loadCategories() {
         db.collection(Restaurants.identifierGroup)
             .addSnapshotListener { (querySnapshot, error) in
+                self.categories = []
                 if let e = error {
                     print(e)
                 } else if let snapshotDocuments = querySnapshot?.documents {
@@ -161,6 +163,7 @@ extension HomeViewController {
     private func loadSpecialDishes() {
         db.collection(Restaurants.identifierGroup)
             .addSnapshotListener { (querySnapshot, error) in
+                self.specials = []
                 if let e = error {
                     print(e)
                 } else if let snapshotDocuments = querySnapshot?.documents {

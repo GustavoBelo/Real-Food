@@ -18,25 +18,27 @@ class ARDishViewController: UIViewController, ARSCNViewDelegate {
     var restaurant: String!
     var dish: String!
     
-    //TODO: tentar sem url
     private let storage = Storage.storage(url: "gs://real-food-d2eae.appspot.com")
-    
+    private var storageRef: StorageReference? = nil
+    private var forestRef: StorageReference? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
+        storageRef = self.storage.reference()
+        forestRef = storageRef!.child("\(restaurant!)/\(dish!).scn")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.write3DModelsToDirectory(modelPath: self.forestRef!, dish: dish)
         
         // Create a session configuration
         let configuration = ARImageTrackingConfiguration()
         if let imageToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Mousepad", bundle: Bundle.main) {
             configuration.trackingImages = imageToTrack
             configuration.maximumNumberOfTrackedImages = 1
-            print("images sucessfully added")
         }
         
         // Run the view's session
@@ -63,14 +65,10 @@ class ARDishViewController: UIViewController, ARSCNViewDelegate {
             planeNode.eulerAngles.x = -.pi/2
             
             node.addChildNode(planeNode)
-            let storageRef = self.storage.reference()
-            let forestRef = storageRef.child("\(restaurant!)/\(dishString).scn")
-            print(dishString)
-            forestRef.getMetadata { metadata, error in
-                if let error = error {
-                    print("cu",error)
+            self.forestRef!.getMetadata { metadata, error in
+                if let e = error {
+                    print(e.localizedDescription)
                 } else {
-                    self.write3DModelsToDirectory(modelPath: forestRef, dish: dishString)
                     self.load3DModelsFromDirectory(in: planeNode, dish: dishString)
                 }
             }
@@ -83,8 +81,8 @@ class ARDishViewController: UIViewController, ARSCNViewDelegate {
         let tempDirectory = URL.init(fileURLWithPath: paths, isDirectory: true)
         let targetUrl = tempDirectory.appendingPathComponent("\(dish).scn")
         modelPath.write(toFile: targetUrl) { (url, error) in
-            if error != nil {
-                print("ERROR: \(error!)")
+            if let e = error {
+                print("ERROR: \(e.localizedDescription)")
             }
         }
     }
@@ -98,7 +96,7 @@ class ARDishViewController: UIViewController, ARSCNViewDelegate {
             // load the 3D-Model node from directory path
             sceneForNode = try SCNScene(url: targetUrl, options: nil)
         }catch{
-            print(error)
+            print(error.localizedDescription)
         }
         // create node to display on scene
         if let node = sceneForNode?.rootNode.childNodes.first {
