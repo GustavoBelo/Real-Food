@@ -41,6 +41,7 @@
 		AAD9D3122775FE4D00F7BA11 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD9D3112775FE4D00F7BA11 /* art.scnassets */; };
 		AAE006232768D08C009AD3BE /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */; };
 		AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */; };
+		AAE03AE0278C7E8D00F9D92B /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE03ADF278C7E8D00F9D92B /* SpinnerViewController.swift */; };
 		AAEB586B2763E06F00247D5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB586A2763E06F00247D5A /* CardView.swift */; };
 		AAFB656D27737CEA00B0970C /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB656C27737CEA00B0970C /* Restaurants.swift */; };
 		D5083C681E5F2E3578FA0A71 /* Pods_Real_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */; };
@@ -85,6 +86,7 @@
 		AAD9D3112775FE4D00F7BA11 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
+		AAE03ADF278C7E8D00F9D92B /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		AAEB586A2763E06F00247D5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AAFB656C27737CEA00B0970C /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +246,7 @@
 		AA7BEFEA2762A60000E89996 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				AAE03ADF278C7E8D00F9D92B /* SpinnerViewController.swift */,
 				AAA8C09F27614739001CB8C8 /* Scanner.swift */,
 				AAE0061F2768D03B009AD3BE /* TableViewCells */,
 				AA189B7B2763E028005B650E /* Cardview */,
@@ -490,6 +493,7 @@
 				AAEB586B2763E06F00247D5A /* CardView.swift in Sources */,
 				AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */,
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
+				AAE03AE0278C7E8D00F9D92B /* SpinnerViewController.swift in Sources */,
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
 				AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */,
 				AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */,

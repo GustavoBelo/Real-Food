@@ -1,32 +1,35 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  Real Food
 //
-//  Created by Gustavo Belo on 08/12/21.
+//  Created by Gustavo Belo on 12/12/21.
 //
 
 import UIKit
-import HideKeyboardWhenTappedAround
 import Firebase
+import HideKeyboardWhenTappedAround
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var confirmedPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
     }
     
-    @IBAction func loginButton(_ sender: UIButton) {
+    @IBAction func registerPressed(_ sender: UIButton) {
+        
         if let email = emailTextField.text,
-           let password = passwordTextField.text {
+           let password = passwordTextField.text,
+           passwordTextField.text == confirmedPasswordTextField.text {
             
             let spinnerVC = SpinnerViewController()
             self.createSpinnerView(spinnerVC)
             
             let firebaseAuth = Auth.auth()
-            firebaseAuth.signIn(withEmail: email, password: password) { authResult, error in
+            firebaseAuth.createUser(withEmail: email, password: password) { authResult, error in
                 self.removeSpinnerView(spinnerVC)
                 if let e = error {
                     print(e.localizedDescription)
@@ -35,8 +38,9 @@ class LoginViewController: UIViewController {
                     self.navigationController?.setViewControllers([controller], animated:true)
                 }
             }
+            
         }
-        
     }
+    
 }
 

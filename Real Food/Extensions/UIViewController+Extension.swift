@@ -22,4 +22,19 @@ extension UIViewController {
         let controller = InitialViewController.instantiate()
         self.navigationController?.setViewControllers([controller], animated: true)
     }
+    
+    func createSpinnerView(_ spinnerVC: SpinnerViewController) {
+        addChild(spinnerVC)
+        spinnerVC.view.frame = view.frame
+        view.addSubview(spinnerVC.view)
+        spinnerVC.didMove(toParent: self)
+    }
+    
+    func removeSpinnerView(_ spinnerVC: SpinnerViewController) {
+        DispatchQueue.main.async {
+            spinnerVC.willMove(toParent: nil)
+            spinnerVC.view.removeFromSuperview()
+            spinnerVC.removeFromParent()
+        }
+    }
 }
