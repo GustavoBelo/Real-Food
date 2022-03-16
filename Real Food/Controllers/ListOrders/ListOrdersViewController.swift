@@ -24,10 +24,6 @@ class ListOrdersViewController: UIViewController {
         loadOrders()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     private func loadOrders() {
         db.collection(Order.K.identifierGroup)
             .order(by: Order.K.date, descending: true)
@@ -93,7 +89,6 @@ extension ListOrdersViewController: UITableViewDelegate, UITableViewDataSource {
         let controller = DishDetailViewController.instantiate()
         controller.restaurant = restaurant
         controller.dish = orders[indexPath.row].dish
-        print(controller.dish, "cu")
         navigationController?.pushViewController(controller, animated: true)
     }
 }

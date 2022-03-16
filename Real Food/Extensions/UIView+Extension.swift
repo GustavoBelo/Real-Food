@@ -19,4 +19,15 @@ extension UIView {
             self.layer.cornerRadius = newValue
         }
     }
+    
+    func bindToSuperview() {
+        if let superview = self.superview{
+            NSLayoutConstraint.activate([
+                topAnchor.constraint(equalTo: superview.topAnchor),
+                leftAnchor.constraint(equalTo: superview.leftAnchor),
+                rightAnchor.constraint(equalTo: superview.rightAnchor),
+                bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+            ])
+        }
+    }
 }

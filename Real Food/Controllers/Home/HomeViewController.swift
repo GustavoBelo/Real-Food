@@ -12,20 +12,14 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
     @IBOutlet private weak var popularCollectionView: UICollectionView!
     @IBOutlet private weak var specialCollectionView: UICollectionView!
-    @IBOutlet private weak var logOutOrLoginButton: UIBarButtonItem!
+    @IBOutlet weak var hamburguerMenu: UIBarButtonItem!
     
-    @IBAction private func logOutOrLoginPressed(_ sender: UIBarButtonItem) {
-        if Auth.auth().currentUser?.email != nil {
-            do {
-                try Auth.auth().signOut()
-                self.goToInitial()
-            } catch let signOutError as NSError {
-                print("Error signing out: %@", signOutError)
-            }
-        } else {
-            self.goToInitial()
-        }
+    @IBAction func hamburguerMenuPressed(_ sender: Any) {
+        let vc = MenuViewController()
+        vc.menuNavigationController = navigationController
+        present(vc, animated: true)
     }
+    
     @IBAction private func CartPressed(_ sender: UIBarButtonItem) {
         let controller = ListOrdersViewController.instantiate()
         controller.restaurant = restaurant
@@ -43,6 +37,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         registerCells()
         restaurant = navigationController?.title
         title = restaurant
@@ -51,11 +46,8 @@ class HomeViewController: UIViewController {
         loadCategories()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if Auth.auth().currentUser?.email == nil {
-            logOutOrLoginButton.title = "Entrar"
-        }
+    private func setupNavigationBar() {
+        hamburguerMenu.image = UIImage(systemName: "line.3.horizontal")
     }
     
     private func registerCells() {

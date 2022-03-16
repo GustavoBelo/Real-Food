@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCC-eD-9jk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xDZ-bN-Ams">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -692,9 +692,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Am-g4-SQN">
                         <barButtonItem key="backBarButtonItem" title=" " id="lrv-cZ-h96"/>
-                        <barButtonItem key="leftBarButtonItem" title="Sair" id="2sT-kx-9kq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="UsJ-Dr-xnK">
                             <connections>
-                                <action selector="logOutOrLoginPressed:" destination="9B2-c8-vEV" id="wfb-ju-Roc"/>
+                                <action selector="hamburguerMenuPressed:" destination="9B2-c8-vEV" id="GAs-Ev-lVT"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart.circle.fill" catalog="system" id="mP1-o2-FQw">
@@ -706,7 +706,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryCollectionView" destination="xMj-QG-Xst" id="Sp1-e1-yMw"/>
-                        <outlet property="logOutOrLoginButton" destination="2sT-kx-9kq" id="wiN-Og-djg"/>
+                        <outlet property="hamburguerMenu" destination="UsJ-Dr-xnK" id="G48-TG-ZAg"/>
                         <outlet property="popularCollectionView" destination="csU-VN-3fk" id="nX1-r6-fbk"/>
                         <outlet property="specialCollectionView" destination="wRa-11-8OW" id="sCW-bS-MwQ"/>
                     </connections>

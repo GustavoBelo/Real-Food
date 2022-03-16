@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0056E027D985FB0053CEF6 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0056DF27D985FB0053CEF6 /* MenuTableViewCell.swift */; };
+		AA0056E227D986570053CEF6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0056E127D986570053CEF6 /* MenuViewController.swift */; };
+		AA0056E427D990F20053CEF6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0056E327D990F20053CEF6 /* MenuView.swift */; };
 		AA189B66276387BF005B650E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA189B65276387BF005B650E /* HomeViewController.swift */; };
 		AA189B6827638805005B650E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA189B6727638804005B650E /* InitialViewController.swift */; };
 		AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA189B732763D140005B650E /* CategoryCollectionViewCell.swift */; };
@@ -28,6 +31,10 @@
 		AA5B5BDA276B87200042585F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5B5BD9276B87200042585F /* GoogleService-Info.plist */; };
 		AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */; };
 		AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */; };
+		AA948A3027DB0B3F00FE81E3 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A2F27DB0B3F00FE81E3 /* EditAccountViewController.swift */; };
+		AA948A3227DB0B5700FE81E3 /* EditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */; };
+		AA948A3427DB0B7100FE81E3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */; };
+		AA948A3727DB0EAC00FE81E3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3627DB0EAC00FE81E3 /* BaseTableViewCell.swift */; };
 		AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */; };
 		AAA8C08327610EB3001CB8C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */; };
 		AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08427610EB3001CB8C8 /* LoginViewController.swift */; };
@@ -50,6 +57,9 @@
 /* Begin PBXFileReference section */
 		06D1DC9779C53E682C4BD8EB /* Pods-Real Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real Food.debug.xcconfig"; path = "Target Support Files/Pods-Real Food/Pods-Real Food.debug.xcconfig"; sourceTree = "<group>"; };
 		6B84BACA6F76EC9A41C3CFDA /* Pods-Real Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real Food.release.xcconfig"; path = "Target Support Files/Pods-Real Food/Pods-Real Food.release.xcconfig"; sourceTree = "<group>"; };
+		AA0056DF27D985FB0053CEF6 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		AA0056E127D986570053CEF6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AA0056E327D990F20053CEF6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AA189B65276387BF005B650E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AA189B6727638804005B650E /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		AA189B732763D140005B650E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +81,10 @@
 		AA5B5BD9276B87200042585F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AA948A2F27DB0B3F00FE81E3 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountView.swift; sourceTree = "<group>"; };
+		AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		AA948A3627DB0EAC00FE81E3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		AAA8C07D27610EB3001CB8C8 /* Real Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0056DE27D985C70053CEF6 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				AA0056E127D986570053CEF6 /* MenuViewController.swift */,
+				AA0056DF27D985FB0053CEF6 /* MenuTableViewCell.swift */,
+				AA0056E327D990F20053CEF6 /* MenuView.swift */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
 		AA189B5B276386CE005B650E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,9 +270,12 @@
 		AA7BEFEA2762A60000E89996 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				AA948A2E27DB091200FE81E3 /* SettingsView */,
+				AA0056DE27D985C70053CEF6 /* MenuView */,
 				AAE03ADF278C7E8D00F9D92B /* SpinnerViewController.swift */,
 				AAA8C09F27614739001CB8C8 /* Scanner.swift */,
-				AAE0061F2768D03B009AD3BE /* TableViewCells */,
+				AA948A3627DB0EAC00FE81E3 /* BaseTableViewCell.swift */,
+				AAE006202768D053009AD3BE /* DishListTableViewCell */,
 				AA189B7B2763E028005B650E /* Cardview */,
 				AA189B712763D0CD005B650E /* CollectionViewCells */,
 			);
@@ -263,6 +290,16 @@
 				AA4A8F852767D5B700AA9A95 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AA948A2E27DB091200FE81E3 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				AA948A2F27DB0B3F00FE81E3 /* EditAccountViewController.swift */,
+				AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */,
+				AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 		AAA8C07427610EB3001CB8C8 = {
@@ -324,14 +361,6 @@
 				AAD9D30F2775F83200F7BA11 /* ARDishViewController.swift */,
 			);
 			path = ARDish;
-			sourceTree = "<group>";
-		};
-		AAE0061F2768D03B009AD3BE /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				AAE006202768D053009AD3BE /* DishListTableViewCell */,
-			);
-			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		AAE006202768D053009AD3BE /* DishListTableViewCell */ = {
@@ -483,10 +512,12 @@
 			files = (
 				AA59D6EA27625278007219BE /* CatchRestaurantNameViewController.swift in Sources */,
 				AA29FE062766843000729D50 /* Dish.swift in Sources */,
+				AA0056E227D986570053CEF6 /* MenuViewController.swift in Sources */,
 				AAFB656D27737CEA00B0970C /* Restaurants.swift in Sources */,
 				AA189B782763D2AA005B650E /* DishCategory.swift in Sources */,
 				AA5B14FB276A6AD90009B7A1 /* ListOrdersViewController.swift in Sources */,
 				AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */,
+				AA948A3027DB0B3F00FE81E3 /* EditAccountViewController.swift in Sources */,
 				AA29FE032766829200729D50 /* DishPortraitCollectionViewCell.swift in Sources */,
 				AA189B6827638805005B650E /* InitialViewController.swift in Sources */,
 				AA29FE0827669DBE00729D50 /* RegisterViewController.swift in Sources */,
@@ -495,15 +526,20 @@
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
 				AAE03AE0278C7E8D00F9D92B /* SpinnerViewController.swift in Sources */,
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
+				AA0056E027D985FB0053CEF6 /* MenuTableViewCell.swift in Sources */,
 				AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */,
+				AA948A3727DB0EAC00FE81E3 /* BaseTableViewCell.swift in Sources */,
 				AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */,
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
 				AA189B66276387BF005B650E /* HomeViewController.swift in Sources */,
+				AA948A3227DB0B5700FE81E3 /* EditAccountView.swift in Sources */,
+				AA0056E427D990F20053CEF6 /* MenuView.swift in Sources */,
 				AA4A8F80276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				AAD9D3102775F83200F7BA11 /* ARDishViewController.swift in Sources */,
 				AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */,
 				AAA8C0A027614739001CB8C8 /* Scanner.swift in Sources */,
 				AAA8C08327610EB3001CB8C8 /* SceneDelegate.swift in Sources */,
+				AA948A3427DB0B7100FE81E3 /* SettingsTableViewCell.swift in Sources */,
 				AA4A8F862767D5B700AA9A95 /* UIViewController+Extension.swift in Sources */,
 				AAE006232768D08C009AD3BE /* DishListTableViewCell.swift in Sources */,
 				AAD9D2002762D85E006A174C /* OnboardingCollectionViewCell.swift in Sources */,
@@ -665,11 +701,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,11 +737,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

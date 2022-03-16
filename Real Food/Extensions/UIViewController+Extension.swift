@@ -18,11 +18,6 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: identifier) as! Self
     }
     
-    func goToInitial() {
-        let controller = InitialViewController.instantiate()
-        self.navigationController?.setViewControllers([controller], animated: true)
-    }
-    
     func createSpinnerView(_ spinnerVC: SpinnerViewController) {
         addChild(spinnerVC)
         spinnerVC.view.frame = view.frame
@@ -36,5 +31,12 @@ extension UIViewController {
             spinnerVC.view.removeFromSuperview()
             spinnerVC.removeFromParent()
         }
+    }
+}
+
+extension UINavigationController {
+    func goToInitial() {
+        let controller = InitialViewController.instantiate()
+        self.setViewControllers([controller], animated: true)
     }
 }
