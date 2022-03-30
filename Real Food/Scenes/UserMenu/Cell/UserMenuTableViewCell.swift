@@ -1,5 +1,5 @@
 //
-//  MenuTableViewCell.swift
+//  UserMenuTableViewCell.swift
 //  Real Food
 //
 //  Created by Gustavo Belo on 09/03/22.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MenuTableViewCell: BaseTableViewCell {
+class UserMenuTableViewCell: BaseTableViewCell {
 
-    static let cellId = "menuTableViewCell"
-    var delegate: MenuViewController!
+    static let cellId = "userTableViewCell"
+    var delegate: UserMenuViewController!
     
     override func setupView() {
         super.setupView()

@@ -41,7 +41,7 @@ extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDeleg
     }
     
     func scanCompleted(withCode code: String) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: HomeViewController.identifier) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: MenuViewController.identifier) {
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .coverVertical
             controller.title = code

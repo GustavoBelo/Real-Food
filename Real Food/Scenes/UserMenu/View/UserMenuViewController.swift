@@ -1,5 +1,5 @@
 //
-//  MenuTableViewController.swift
+//  UserMenuViewController.swift
 //  Real Food
 //
 //  Created by Gustavo Belo on 09/03/22.
@@ -8,12 +8,12 @@
 import UIKit
 import Firebase
 
-class MenuViewController: UIViewController {
+class UserMenuViewController: UIViewController {
     
     var menuNavigationController: UINavigationController!
     
-    private let menuView: MenuView = {
-       return MenuView()
+    private let menuView: UserMenuView = {
+       return UserMenuView()
     }()
     
     init() {
@@ -49,14 +49,14 @@ class MenuViewController: UIViewController {
     }
 }
 
-extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
+extension UserMenuViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.cellId, for: indexPath) as? MenuTableViewCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: UserMenuTableViewCell.cellId, for: indexPath) as? UserMenuTableViewCell{
             setupCell(to: cell, at: indexPath.row)
             return cell
         }
@@ -68,7 +68,7 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func setupCell(to cell: MenuTableViewCell, at indexPath: Int) {
+    func setupCell(to cell: UserMenuTableViewCell, at indexPath: Int) {
         switch indexPath {
         case 0:
             cell.setupCell(icon: "person", title: "Conta", at: indexPath)

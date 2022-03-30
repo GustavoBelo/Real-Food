@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MenuViewController.swift
 //  Real Food
 //
 //  Created by Gustavo Belo on 10/12/21.
@@ -8,14 +8,14 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController {
+class MenuViewController: UIViewController {
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
     @IBOutlet private weak var popularCollectionView: UICollectionView!
     @IBOutlet private weak var specialCollectionView: UICollectionView!
     @IBOutlet weak var hamburguerMenu: UIBarButtonItem!
     
     @IBAction func hamburguerMenuPressed(_ sender: Any) {
-        let vc = MenuViewController()
+        let vc = UserMenuViewController()
         vc.menuNavigationController = navigationController
         present(vc, animated: true)
     }
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case categoryCollectionView:
@@ -104,7 +104,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
-extension HomeViewController {
+extension MenuViewController {
     private func loadPopularDishes() {
         db.collection(Restaurants.identifierGroup)
             .addSnapshotListener { (querySnapshot, error) in
