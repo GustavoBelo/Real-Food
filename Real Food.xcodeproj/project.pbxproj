@@ -21,6 +21,10 @@
 		AA29FE062766843000729D50 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29FE052766843000729D50 /* Dish.swift */; };
 		AA29FE0827669DBE00729D50 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29FE0727669DBE00729D50 /* RegisterViewController.swift */; };
 		AA2F3C2427691C3500927C55 /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F3C2327691C3500927C55 /* ListDishesViewController.swift */; };
+		AA43CF4627FA9C96005E8CD2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA43CF4527FA9C96005E8CD2 /* HomeView.swift */; };
+		AA43CF4927FA9D59005E8CD2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA43CF4827FA9D59005E8CD2 /* BaseView.swift */; };
+		AA43CF4B27FA9D71005E8CD2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA43CF4A27FA9D71005E8CD2 /* BaseViewController.swift */; };
+		AA43CF4D27FAA206005E8CD2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA43CF4C27FAA206005E8CD2 /* Theme.swift */; };
 		AA4A8F80276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A8F7E276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift */; };
 		AA4A8F81276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4A8F7F276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib */; };
 		AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A8F832767C76E00AA9A95 /* DishDetailViewController.swift */; };
@@ -35,6 +39,8 @@
 		AA948A3227DB0B5700FE81E3 /* EditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */; };
 		AA948A3427DB0B7100FE81E3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */; };
 		AA948A3727DB0EAC00FE81E3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3627DB0EAC00FE81E3 /* BaseTableViewCell.swift */; };
+		AAA63BE827FD4A1D009272A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA63BE727FD4A1D009272A9 /* HomeViewController.swift */; };
+		AAA63BEB27FD5E67009272A9 /* RestaurantsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA63BEA27FD5E67009272A9 /* RestaurantsExampleView.swift */; };
 		AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */; };
 		AAA8C08327610EB3001CB8C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */; };
 		AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C08427610EB3001CB8C8 /* LoginViewController.swift */; };
@@ -49,6 +55,8 @@
 		AAE006232768D08C009AD3BE /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */; };
 		AAE006242768D08C009AD3BE /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */; };
 		AAE03AE0278C7E8D00F9D92B /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE03ADF278C7E8D00F9D92B /* SpinnerViewController.swift */; };
+		AAE20BCE27FD6C70006B9F80 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE20BCD27FD6C70006B9F80 /* HeaderView.swift */; };
+		AAE20BD027FD6F3B006B9F80 /* HeaderViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE20BCF27FD6F3B006B9F80 /* HeaderViewButton.swift */; };
 		AAEB586B2763E06F00247D5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB586A2763E06F00247D5A /* CardView.swift */; };
 		AAFB656D27737CEA00B0970C /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFB656C27737CEA00B0970C /* Restaurants.swift */; };
 		D5083C681E5F2E3578FA0A71 /* Pods_Real_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */; };
@@ -71,6 +79,10 @@
 		AA29FE052766843000729D50 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		AA29FE0727669DBE00729D50 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AA2F3C2327691C3500927C55 /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
+		AA43CF4527FA9C96005E8CD2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA43CF4827FA9D59005E8CD2 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		AA43CF4A27FA9D71005E8CD2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AA43CF4C27FAA206005E8CD2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AA4A8F7E276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA4A8F7F276781E200AA9A95 /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		AA4A8F832767C76E00AA9A95 /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +97,8 @@
 		AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountView.swift; sourceTree = "<group>"; };
 		AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		AA948A3627DB0EAC00FE81E3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		AAA63BE727FD4A1D009272A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AAA63BEA27FD5E67009272A9 /* RestaurantsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsExampleView.swift; sourceTree = "<group>"; };
 		AAA8C07D27610EB3001CB8C8 /* Real Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +115,8 @@
 		AAE006212768D08C009AD3BE /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		AAE006222768D08C009AD3BE /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
 		AAE03ADF278C7E8D00F9D92B /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		AAE20BCD27FD6C70006B9F80 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AAE20BCF27FD6F3B006B9F80 /* HeaderViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewButton.swift; sourceTree = "<group>"; };
 		AAEB586A2763E06F00247D5A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AAFB656C27737CEA00B0970C /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		FF7F1AB9F79ACF2C622A13C9 /* Pods_Real_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +178,10 @@
 		AA189B5F2763873C005B650E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AAA63BE927FD5E23009272A9 /* Components */,
 				AA189B6727638804005B650E /* InitialViewController.swift */,
+				AA43CF4527FA9C96005E8CD2 /* HomeView.swift */,
+				AAA63BE727FD4A1D009272A9 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -210,6 +229,16 @@
 				AA2F3C2327691C3500927C55 /* ListDishesViewController.swift */,
 			);
 			path = ListDishes;
+			sourceTree = "<group>";
+		};
+		AA43CF4727FA9D3B005E8CD2 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				AA43CF4C27FAA206005E8CD2 /* Theme.swift */,
+				AA43CF4827FA9D59005E8CD2 /* BaseView.swift */,
+				AA43CF4A27FA9D71005E8CD2 /* BaseViewController.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		AA4A8F7D276781B500AA9A95 /* DishLandscapeCollectionViewCell */ = {
@@ -281,6 +310,16 @@
 			path = EditAccoount;
 			sourceTree = "<group>";
 		};
+		AAA63BE927FD5E23009272A9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AAA63BEA27FD5E67009272A9 /* RestaurantsExampleView.swift */,
+				AAE20BCD27FD6C70006B9F80 /* HeaderView.swift */,
+				AAE20BCF27FD6F3B006B9F80 /* HeaderViewButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		AAA8C07427610EB3001CB8C8 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +368,7 @@
 		AAD8C8E327F51C3600902739 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AA43CF4727FA9D3B005E8CD2 /* BaseView */,
 				AA189B5B276386CE005B650E /* Onboarding */,
 				AA189B5F2763873C005B650E /* Home */,
 				AA0056DE27D985C70053CEF6 /* UserMenu */,
@@ -567,9 +607,12 @@
 				AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */,
 				AA948A3027DB0B3F00FE81E3 /* EditAccountViewController.swift in Sources */,
 				AA29FE032766829200729D50 /* DishPortraitCollectionViewCell.swift in Sources */,
+				AA43CF4627FA9C96005E8CD2 /* HomeView.swift in Sources */,
 				AA189B6827638805005B650E /* InitialViewController.swift in Sources */,
 				AA29FE0827669DBE00729D50 /* RegisterViewController.swift in Sources */,
 				AAEB586B2763E06F00247D5A /* CardView.swift in Sources */,
+				AAE20BCE27FD6C70006B9F80 /* HeaderView.swift in Sources */,
+				AA43CF4927FA9D59005E8CD2 /* BaseView.swift in Sources */,
 				AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */,
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
 				AAE03AE0278C7E8D00F9D92B /* SpinnerViewController.swift in Sources */,
@@ -579,16 +622,21 @@
 				AA948A3727DB0EAC00FE81E3 /* BaseTableViewCell.swift in Sources */,
 				AA4A8F842767C76E00AA9A95 /* DishDetailViewController.swift in Sources */,
 				AAD9D1FD2762D5BF006A174C /* OnboardingSlide.swift in Sources */,
+				AA43CF4B27FA9D71005E8CD2 /* BaseViewController.swift in Sources */,
 				AA189B66276387BF005B650E /* MenuViewController.swift in Sources */,
 				AA948A3227DB0B5700FE81E3 /* EditAccountView.swift in Sources */,
 				AA0056E427D990F20053CEF6 /* UserMenuView.swift in Sources */,
 				AA4A8F80276781E200AA9A95 /* DishLandscapeCollectionViewCell.swift in Sources */,
 				AAD9D3102775F83200F7BA11 /* ARDishViewController.swift in Sources */,
 				AAA8C08127610EB3001CB8C8 /* AppDelegate.swift in Sources */,
+				AA43CF4D27FAA206005E8CD2 /* Theme.swift in Sources */,
+				AAA63BEB27FD5E67009272A9 /* RestaurantsExampleView.swift in Sources */,
 				AAA8C0A027614739001CB8C8 /* Scanner.swift in Sources */,
 				AAA8C08327610EB3001CB8C8 /* SceneDelegate.swift in Sources */,
 				AA948A3427DB0B7100FE81E3 /* SettingsTableViewCell.swift in Sources */,
+				AAE20BD027FD6F3B006B9F80 /* HeaderViewButton.swift in Sources */,
 				AA4A8F862767D5B700AA9A95 /* UIViewController+Extension.swift in Sources */,
+				AAA63BE827FD4A1D009272A9 /* HomeViewController.swift in Sources */,
 				AAE006232768D08C009AD3BE /* DishListTableViewCell.swift in Sources */,
 				AAD9D2002762D85E006A174C /* OnboardingCollectionViewCell.swift in Sources */,
 				AA189B7A2763D426005B650E /* String+Extentsion.swift in Sources */,
@@ -748,7 +796,6 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
@@ -784,7 +831,6 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;

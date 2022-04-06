@@ -8,7 +8,7 @@
 import Foundation
 
 struct Restaurants {
-    static let identifierGroup = String(describing: Self.self)
+    static let identifierGroup = "Restaurants"
     static let identifier = "restaurant"
     
     static let categories = "categories"

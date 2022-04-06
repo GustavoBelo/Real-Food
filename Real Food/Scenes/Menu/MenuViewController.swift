@@ -41,12 +41,14 @@ class MenuViewController: UIViewController {
         registerCells()
         restaurant = navigationController?.title
         title = restaurant
+        print(title)
         loadPopularDishes()
         loadSpecialDishes()
         loadCategories()
     }
     
     private func setupNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = false
         hamburguerMenu.image = UIImage(systemName: "line.3.horizontal")
     }
     

@@ -20,7 +20,7 @@ class CatchRestaurantNameViewController: UIViewController {
         
         self.scanner = Scanner(withDelegate: self)
         scanner?.requestCaptureSessionStartRunning()
-    }    
+    }
 }
 
 extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDelegate, ScannerDelegate {
@@ -41,12 +41,10 @@ extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDeleg
     }
     
     func scanCompleted(withCode code: String) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: MenuViewController.identifier) {
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
-            controller.title = code
-            return present(controller, animated: true)
-        }
+        let controller = MenuViewController.instantiate()
+        navigationController?.title = code
+        navigationController?.pushViewController(controller, animated: true)
+        
     }
     
 }
