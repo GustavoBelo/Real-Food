@@ -32,30 +32,33 @@ class HomeView: BaseView, RestaurantsExampleViewDelegate {
         return view
     }()
     
-    lazy var headerView: HeaderView = {
+    var headerView: HeaderView = {
         let view = HeaderView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setupView()
-        view.delegate = self
         
         return view
     }()
     
-    lazy var restaurantsExampleView: RestaurantsExampleView =  {
+    var restaurantsExampleView: RestaurantsExampleView =  {
         let view = RestaurantsExampleView(title: Strings.restaurantsExampleView.title, seeMoreText: Strings.restaurantsExampleView.seeMoreText)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setupView()
-        view.seeMoreButton.addTarget(self, action: #selector(showRestaurantsList), for: .touchUpInside)
         return view
     }()
-
+    
     override func setupView() {
         self.backgroundColor = Theme.backgroundColor
-        setTableHeaderView()
+        setupTableHeaderView()
         addSubviews()
     }
     
-    private func setTableHeaderView() {
+    private func setupComponents() {
+        restaurantsExampleView.seeMoreButton.addTarget(self, action: #selector(showRestaurantsList), for: .touchUpInside)
+    }
+    
+    private func setupTableHeaderView() {
+        headerView.delegate = self
         setTitle(text: Strings.title)
     }
     
@@ -66,7 +69,7 @@ class HomeView: BaseView, RestaurantsExampleViewDelegate {
         contentView.addSubview(restaurantsExampleView)
         scrollView.addSubview(contentView)
         self.addSubview(scrollView)
-        restaurantsExampleView.isHidden = true// michael jackson
+        restaurantsExampleView.isHidden = false// michael jackson
     }
     
     override func setupConstraints() {
@@ -113,5 +116,5 @@ extension HomeView: HeaderViewDelegate {
     
     func openSearchRestaurant() {
         delegate?.openSearchRestaurant()
-    }    
+    }
 }

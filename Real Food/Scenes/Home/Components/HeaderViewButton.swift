@@ -22,41 +22,56 @@ class HeaderViewButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var componentIcon: UIButton = {
+    private var componentIcon: UIButton = {
         let button =  UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
-        let iconImage = UIImage(systemName: icon, withConfiguration: largeConfig)
-        button.setImage(iconImage, for: .normal)
         return button
     }()
     
-    private lazy var componentLabel: UILabel = {
+    private var componentLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = title
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.numberOfLines = 2
         return label
     }()
     
-    private lazy var component: UIView = {
+    private var component: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        view.accessibilityLabel = title
-        view.accessibilityTraits = .button
         view.isUserInteractionEnabled = true
         
         return view
     }()
     
     func setupView() {
+        setupComponents()
+        addSubviews()
+        setupAccessibility()
+        setupConstraints()
+    }
+    
+    private func addSubviews() {
         component.addSubview(componentIcon)
         component.addSubview(componentLabel)
         self.addSubview(component)
-        
-        setupConstraints()
     }
-
+    
+    private func setupComponents() {
+        componentLabel.text = title
+        
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .regular, scale: .large)
+        let iconImage = UIImage(systemName: icon, withConfiguration: largeConfig)
+        componentIcon.setImage(iconImage, for: .normal)
+        componentIcon.tintColor = .black
+    }
+    
+    private func setupAccessibility() {
+        component.accessibilityLabel = title
+        component.accessibilityTraits = .button
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             component.topAnchor.constraint(equalTo: self.topAnchor),
@@ -64,13 +79,14 @@ class HeaderViewButton: UIView {
             component.rightAnchor.constraint(equalTo: self.rightAnchor),
             component.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            componentIcon.topAnchor.constraint(equalTo: component.topAnchor, constant: 10),
+            componentIcon.centerYAnchor.constraint(equalTo: component.centerYAnchor),
             componentIcon.leftAnchor.constraint(equalTo: component.leftAnchor, constant: 10),
+            componentIcon.widthAnchor.constraint(equalToConstant: 30),
             
             componentLabel.centerYAnchor.constraint(equalTo: componentIcon.centerYAnchor),
             componentLabel.leftAnchor.constraint(equalTo: componentIcon.rightAnchor, constant: 10),
-            componentLabel.bottomAnchor.constraint(equalTo: component.bottomAnchor, constant: -13),
-        
+            componentLabel.rightAnchor.constraint(equalTo: component.rightAnchor)
+            
         ])
     }
 }
