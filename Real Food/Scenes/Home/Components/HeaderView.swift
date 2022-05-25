@@ -67,13 +67,16 @@ class HeaderView: UIView {
     
     func setupView() {
         setupElements()
+        addSubviews()
+        setupConstraints()
+    }
+    
+    private func addSubviews() {
         self.addSubview(titleLabel)
         
         buttonsStackView.addArrangedSubview(qrCodeButton)
         buttonsStackView.addArrangedSubview(searchRestaurantButton)
         self.addSubview(buttonsStackView)
-        
-        setupConstraints()
     }
     
     private func setupConstraints() {

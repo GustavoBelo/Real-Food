@@ -12,6 +12,8 @@ class BaseView: UIView {
     private static let navBarTitleFont = UIFont.systemFont(ofSize: 24)
     private static let sectionTitleFont = UIFont.systemFont(ofSize: 16)
     
+    static let iPhone5Height: CGFloat = 1136
+    
     // MARK: - Initialization
     override public init(frame: CGRect) {
         super.init(frame: frame)

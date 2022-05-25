@@ -13,6 +13,7 @@ struct Theme {
     static var iconTextColor: UIColor = .black
     static var profileTextColor: UIColor = .black
     static var componentForegroundColor = UIColor(red: 0.921, green: 0.917, blue: 0.917, alpha: 1)
+    static var shimmerForegroundColor = UIColor.systemGray4
     
     static var textColor: UIColor = .black
     static var specialTextColor = UIColor(red: 0.878, green: 0.227, blue: 0, alpha: 1)

@@ -33,6 +33,6 @@ class UserMenuView: UIView {
     }
     
     private func setupConstraints() {
-        menuTableView.bindToSuperview()
+        menuTableView.bindEdgesToSuperview()
     }
 }

@@ -55,16 +55,12 @@ class EditAccountView: UIView {
     
     private func addSubviews() {
         self.addSubview(nameTextField)
-        
         self.addSubview(updatePasswordButton)
-        
         self.addSubview(updateNameButton)
-        
         self.addSubview(deleteUserButton)
     }
     
     private func setupConstraints() {
-        self.bindToSuperview()
         NSLayoutConstraint.activate([
             nameTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             nameTextField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -100),

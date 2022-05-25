@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 import AVFoundation
 
 class HomeViewController: BaseViewController {
@@ -53,6 +53,12 @@ extension HomeViewController: HeaderViewDelegate {
     
     func openSearchRestaurant() {
 //        delegate?.openSearchRestaurant()
+    }
+    
+    func openRestaurantMenu(name: String) {
+        let controller = MenuViewController.instantiate()
+        navigationController?.title = name
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

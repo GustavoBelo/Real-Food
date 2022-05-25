@@ -83,7 +83,8 @@ extension UserMenuViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             editAccount()
         case 1:
-            loggout()
+            goToHome()
+//            loggout() // michael jackson
         default: break
         }
     }
@@ -92,6 +93,11 @@ extension UserMenuViewController: UITableViewDataSource, UITableViewDelegate {
         self.dismiss(animated: true)
         let nextViewController = EditAccountViewController()
         self.menuNavigationController.pushViewController(nextViewController, animated:true) 
+    }
+    
+    private func goToHome() {
+        self.dismiss(animated: true)
+        self.menuNavigationController.popToRootViewController(animated: true)
     }
     
     private func loggout() {

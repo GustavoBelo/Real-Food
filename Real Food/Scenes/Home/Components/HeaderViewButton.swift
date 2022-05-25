@@ -8,6 +8,7 @@
 import UIKit
 
 class HeaderViewButton: UIView {
+    var isIPhone5: Bool = false
     
     var title: String
     var icon: String
@@ -31,7 +32,6 @@ class HeaderViewButton: UIView {
     private var componentLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 2
         return label
     }()
@@ -39,16 +39,12 @@ class HeaderViewButton: UIView {
     private var component: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.isUserInteractionEnabled = true
-        
         return view
     }()
     
     func setupView() {
         setupComponents()
         addSubviews()
-        setupAccessibility()
         setupConstraints()
     }
     
@@ -59,17 +55,21 @@ class HeaderViewButton: UIView {
     }
     
     private func setupComponents() {
+        var titleFontSize: CGFloat = 16
+        var iconPointSize: CGFloat = 20
+        if UIScreen.main.nativeBounds.height == BaseView.iPhone5Height {
+            isIPhone5 = true
+            titleFontSize = 15
+            iconPointSize = 16
+        }
+        componentLabel.font = UIFont.systemFont(ofSize: titleFontSize)
         componentLabel.text = title
         
-        let largeConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .regular, scale: .large)
+        let largeConfig = UIImage.SymbolConfiguration(pointSize: iconPointSize, weight: .regular, scale: .large)
         let iconImage = UIImage(systemName: icon, withConfiguration: largeConfig)
+        
         componentIcon.setImage(iconImage, for: .normal)
         componentIcon.tintColor = .black
-    }
-    
-    private func setupAccessibility() {
-        component.accessibilityLabel = title
-        component.accessibilityTraits = .button
     }
     
     private func setupConstraints() {
@@ -80,11 +80,11 @@ class HeaderViewButton: UIView {
             component.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             componentIcon.centerYAnchor.constraint(equalTo: component.centerYAnchor),
-            componentIcon.leftAnchor.constraint(equalTo: component.leftAnchor, constant: 10),
+            componentIcon.leftAnchor.constraint(equalTo: component.leftAnchor, constant: isIPhone5 ? 5 : 10),
             componentIcon.widthAnchor.constraint(equalToConstant: 30),
             
             componentLabel.centerYAnchor.constraint(equalTo: componentIcon.centerYAnchor),
-            componentLabel.leftAnchor.constraint(equalTo: componentIcon.rightAnchor, constant: 10),
+            componentLabel.leftAnchor.constraint(equalTo: componentIcon.rightAnchor, constant: isIPhone5 ? 5 : 10),
             componentLabel.rightAnchor.constraint(equalTo: component.rightAnchor)
             
         ])

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeView: BaseView, RestaurantsExampleViewDelegate {
+class HomeView: BaseView {
     
     weak var delegate: HomeViewController?
     
@@ -50,10 +50,12 @@ class HomeView: BaseView, RestaurantsExampleViewDelegate {
     override func setupView() {
         self.backgroundColor = Theme.backgroundColor
         setupTableHeaderView()
+        setupComponents()
         addSubviews()
     }
     
     private func setupComponents() {
+        restaurantsExampleView.delegate = self
         restaurantsExampleView.seeMoreButton.addTarget(self, action: #selector(showRestaurantsList), for: .touchUpInside)
     }
     
@@ -66,20 +68,19 @@ class HomeView: BaseView, RestaurantsExampleViewDelegate {
         contentView.addSubview(titleLabel)
         contentView.addSubview(headerView)
         
-        contentView.addSubview(restaurantsExampleView)
         scrollView.addSubview(contentView)
+        scrollView.addSubview(restaurantsExampleView)
         self.addSubview(scrollView)
-        restaurantsExampleView.isHidden = false// michael jackson
     }
     
     override func setupConstraints() {
         NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            scrollView.topAnchor.constraint(equalTo: self.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            scrollView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height),
             
-            contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 32),
             contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
@@ -90,22 +91,14 @@ class HomeView: BaseView, RestaurantsExampleViewDelegate {
             headerView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             headerView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             headerView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            headerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
             restaurantsExampleView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 20),
-            restaurantsExampleView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            restaurantsExampleView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            restaurantsExampleView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 32),
+            restaurantsExampleView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -32),
             
-            restaurantsExampleView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            restaurantsExampleView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
-    }
-    
-    @objc
-    func showRestaurantsList() {
-        delegate?.showRestaurantsList()
-    }
-    
-    func showRestaurantsNearby() {
-        delegate?.showRestaurantsNearby()
     }
 }
 
@@ -116,5 +109,20 @@ extension HomeView: HeaderViewDelegate {
     
     func openSearchRestaurant() {
         delegate?.openSearchRestaurant()
+    }
+}
+
+extension HomeView: RestaurantsExampleViewDelegate {
+    @objc
+    func showRestaurantsList() {
+        delegate?.showRestaurantsList()
+    }
+    
+    func showRestaurantsNearby() {
+        delegate?.showRestaurantsNearby()
+    }
+    
+    func openRestaurantMenu(name: String) {
+        delegate?.openRestaurantMenu(name: name)
     }
 }
