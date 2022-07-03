@@ -36,7 +36,7 @@ extension UIViewController {
 
 extension UINavigationController {
     func goToInitial() {
-        let controller = InitialViewController.instantiate()
+        let controller = HomeViewController()
         self.setViewControllers([controller], animated: true)
     }
 }

@@ -694,7 +694,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="lrv-cZ-h96"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" id="UsJ-Dr-xnK">
                             <connections>
-                                <action selector="hamburguerMenuPressed:" destination="9B2-c8-vEV" id="GAs-Ev-lVT"/>
+                                <action selector="backButtonMenuPressed:" destination="9B2-c8-vEV" id="z2h-ou-4sh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart.circle.fill" catalog="system" id="mP1-o2-FQw">
@@ -705,8 +705,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="UsJ-Dr-xnK" id="G48-TG-ZAg"/>
                         <outlet property="categoryCollectionView" destination="xMj-QG-Xst" id="Sp1-e1-yMw"/>
-                        <outlet property="hamburguerMenu" destination="UsJ-Dr-xnK" id="G48-TG-ZAg"/>
                         <outlet property="popularCollectionView" destination="csU-VN-3fk" id="nX1-r6-fbk"/>
                         <outlet property="specialCollectionView" destination="wRa-11-8OW" id="sCW-bS-MwQ"/>
                     </connections>

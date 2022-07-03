@@ -12,12 +12,10 @@ class MenuViewController: UIViewController {
     @IBOutlet private weak var categoryCollectionView: UICollectionView!
     @IBOutlet private weak var popularCollectionView: UICollectionView!
     @IBOutlet private weak var specialCollectionView: UICollectionView!
-    @IBOutlet weak var hamburguerMenu: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
-    @IBAction func hamburguerMenuPressed(_ sender: Any) {
-        let vc = UserMenuViewController()
-        vc.menuNavigationController = navigationController
-        present(vc, animated: true)
+    @IBAction func backButtonMenuPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction private func CartPressed(_ sender: UIBarButtonItem) {
@@ -49,7 +47,7 @@ class MenuViewController: UIViewController {
     
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.isHidden = false
-        hamburguerMenu.image = UIImage(systemName: "line.3.horizontal")
+        backButton.image = UIImage(systemName: "chevron.backward")
     }
     
     private func registerCells() {
