@@ -11,15 +11,6 @@ class HomeView: BaseView {
     
     weak var delegate: HomeViewController?
     
-    struct Strings {
-        static let title = "Real Food"
-        
-        struct restaurantsExampleView {
-            static let title = "Restaurantes"
-            static let seeMoreText = "ver todos"
-        }
-    }
-    
     let scrollView: UIScrollView = {
         let view = UIScrollView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +32,7 @@ class HomeView: BaseView {
     }()
     
     var restaurantsExampleView: RestaurantsExampleView =  {
-        let view = RestaurantsExampleView(title: Strings.restaurantsExampleView.title, seeMoreText: Strings.restaurantsExampleView.seeMoreText)
+        let view = RestaurantsExampleView(title: Strings.Home.restaurantsExampleView.title, seeMoreText: Strings.Home.restaurantsExampleView.seeMoreText)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setupView()
         return view
@@ -61,7 +52,7 @@ class HomeView: BaseView {
     
     private func setupTableHeaderView() {
         headerView.delegate = self
-        setTitle(text: Strings.title)
+        setTitle(text: Strings.Home.title)
     }
     
     private func addSubviews() {

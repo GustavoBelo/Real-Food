@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCC-eD-9jk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -66,13 +66,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="kdB-UP-g3x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QfO-HU-9bb" secondAttribute="bottom" constant="40" id="CyZ-0Y-3Yf"/>
-                            <constraint firstItem="QfO-HU-9bb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QPn-4Y-avz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QfO-HU-9bb" secondAttribute="trailing" constant="10" id="fsV-JZ-0lz"/>
-                            <constraint firstItem="QfO-HU-9bb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jhS-yc-fcQ"/>
+                            <constraint firstItem="kdB-UP-g3x" firstAttribute="bottom" secondItem="QfO-HU-9bb" secondAttribute="bottom" constant="40" id="CyZ-0Y-3Yf"/>
+                            <constraint firstItem="QfO-HU-9bb" firstAttribute="top" secondItem="kdB-UP-g3x" secondAttribute="top" constant="10" id="QPn-4Y-avz"/>
+                            <constraint firstItem="kdB-UP-g3x" firstAttribute="trailing" secondItem="QfO-HU-9bb" secondAttribute="trailing" constant="10" id="fsV-JZ-0lz"/>
+                            <constraint firstItem="QfO-HU-9bb" firstAttribute="leading" secondItem="kdB-UP-g3x" secondAttribute="leading" constant="10" id="jhS-yc-fcQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Início" leftItemsSupplementBackButton="YES" id="iA3-3t-uNv"/>
@@ -222,13 +222,13 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="TNq-8a-fCj"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="HMa-f9-05x"/>
+                        <viewLayoutGuide key="safeArea" id="VbC-TM-KNU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HMa-f9-05x" firstAttribute="trailing" secondItem="Hbo-s6-u2V" secondAttribute="trailing" id="2o0-qP-Ey3"/>
-                            <constraint firstItem="HMa-f9-05x" firstAttribute="bottom" secondItem="Hbo-s6-u2V" secondAttribute="bottom" id="3e0-Vw-2hc"/>
-                            <constraint firstItem="Hbo-s6-u2V" firstAttribute="top" secondItem="HMa-f9-05x" secondAttribute="top" id="4Bq-o3-khG"/>
-                            <constraint firstItem="Hbo-s6-u2V" firstAttribute="leading" secondItem="HMa-f9-05x" secondAttribute="leading" id="6oX-bJ-KX9"/>
+                            <constraint firstItem="VbC-TM-KNU" firstAttribute="trailing" secondItem="Hbo-s6-u2V" secondAttribute="trailing" id="2o0-qP-Ey3"/>
+                            <constraint firstItem="VbC-TM-KNU" firstAttribute="bottom" secondItem="Hbo-s6-u2V" secondAttribute="bottom" id="3e0-Vw-2hc"/>
+                            <constraint firstItem="Hbo-s6-u2V" firstAttribute="top" secondItem="VbC-TM-KNU" secondAttribute="top" id="4Bq-o3-khG"/>
+                            <constraint firstItem="Hbo-s6-u2V" firstAttribute="leading" secondItem="VbC-TM-KNU" secondAttribute="leading" id="6oX-bJ-KX9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S6B-PT-xCB"/>
@@ -303,12 +303,12 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="JCN-iB-Reu"/>
+                        <viewLayoutGuide key="safeArea" id="OjP-cp-7VP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JCN-iB-Reu" firstAttribute="trailing" secondItem="21K-BG-3h8" secondAttribute="trailing" constant="15" id="rj1-Hm-Mkm"/>
-                            <constraint firstItem="21K-BG-3h8" firstAttribute="top" secondItem="JCN-iB-Reu" secondAttribute="top" constant="25" id="vJD-gB-LNX"/>
-                            <constraint firstItem="21K-BG-3h8" firstAttribute="leading" secondItem="JCN-iB-Reu" secondAttribute="leading" constant="15" id="yPJ-kt-rfP"/>
+                            <constraint firstItem="OjP-cp-7VP" firstAttribute="trailing" secondItem="21K-BG-3h8" secondAttribute="trailing" constant="15" id="rj1-Hm-Mkm"/>
+                            <constraint firstItem="21K-BG-3h8" firstAttribute="top" secondItem="OjP-cp-7VP" secondAttribute="top" constant="25" id="vJD-gB-LNX"/>
+                            <constraint firstItem="21K-BG-3h8" firstAttribute="leading" secondItem="OjP-cp-7VP" secondAttribute="leading" constant="15" id="yPJ-kt-rfP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Entrar" id="z49-NW-bXc">
@@ -359,13 +359,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="UKn-cL-T5l"/>
+                        <viewLayoutGuide key="safeArea" id="6xl-0U-44g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UKn-cL-T5l" firstAttribute="trailing" secondItem="AMd-KU-D0H" secondAttribute="trailing" id="XOG-xy-aA7"/>
-                            <constraint firstItem="UKn-cL-T5l" firstAttribute="bottom" secondItem="AMd-KU-D0H" secondAttribute="bottom" id="f9T-2e-ig9"/>
-                            <constraint firstItem="AMd-KU-D0H" firstAttribute="top" secondItem="UKn-cL-T5l" secondAttribute="top" id="foX-VP-nSm"/>
-                            <constraint firstItem="AMd-KU-D0H" firstAttribute="leading" secondItem="UKn-cL-T5l" secondAttribute="leading" id="qxQ-t1-iWG"/>
+                            <constraint firstItem="6xl-0U-44g" firstAttribute="trailing" secondItem="AMd-KU-D0H" secondAttribute="trailing" id="XOG-xy-aA7"/>
+                            <constraint firstItem="6xl-0U-44g" firstAttribute="bottom" secondItem="AMd-KU-D0H" secondAttribute="bottom" id="f9T-2e-ig9"/>
+                            <constraint firstItem="AMd-KU-D0H" firstAttribute="top" secondItem="6xl-0U-44g" secondAttribute="top" id="foX-VP-nSm"/>
+                            <constraint firstItem="AMd-KU-D0H" firstAttribute="leading" secondItem="6xl-0U-44g" secondAttribute="leading" id="qxQ-t1-iWG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vjy-14-sTm"/>
@@ -501,16 +501,16 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="H6m-io-xiy"/>
+                        <viewLayoutGuide key="safeArea" id="vtl-7M-nXx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="H6m-io-xiy" firstAttribute="bottom" secondItem="f7f-p4-1yp" secondAttribute="bottom" constant="40" id="Nd5-JR-4Gr"/>
-                            <constraint firstItem="tGC-55-yqF" firstAttribute="leading" secondItem="H6m-io-xiy" secondAttribute="leading" id="V47-X1-NCf"/>
-                            <constraint firstItem="tGC-55-yqF" firstAttribute="top" secondItem="H6m-io-xiy" secondAttribute="top" id="WWm-Pu-LUl"/>
+                            <constraint firstItem="vtl-7M-nXx" firstAttribute="bottom" secondItem="f7f-p4-1yp" secondAttribute="bottom" constant="40" id="Nd5-JR-4Gr"/>
+                            <constraint firstItem="tGC-55-yqF" firstAttribute="leading" secondItem="vtl-7M-nXx" secondAttribute="leading" id="V47-X1-NCf"/>
+                            <constraint firstItem="tGC-55-yqF" firstAttribute="top" secondItem="vtl-7M-nXx" secondAttribute="top" id="WWm-Pu-LUl"/>
                             <constraint firstItem="f7f-p4-1yp" firstAttribute="top" secondItem="ACn-zK-VQa" secondAttribute="bottom" constant="16" id="Z3A-Ja-DfE"/>
-                            <constraint firstItem="f7f-p4-1yp" firstAttribute="centerX" secondItem="I0V-4k-wnb" secondAttribute="centerX" id="fAC-Ox-mgU"/>
-                            <constraint firstItem="ACn-zK-VQa" firstAttribute="centerX" secondItem="H6m-io-xiy" secondAttribute="centerX" id="ffm-V8-ApJ"/>
-                            <constraint firstItem="H6m-io-xiy" firstAttribute="trailing" secondItem="tGC-55-yqF" secondAttribute="trailing" id="nM6-VG-65O"/>
+                            <constraint firstItem="f7f-p4-1yp" firstAttribute="centerX" secondItem="vtl-7M-nXx" secondAttribute="centerX" id="fAC-Ox-mgU"/>
+                            <constraint firstItem="ACn-zK-VQa" firstAttribute="centerX" secondItem="vtl-7M-nXx" secondAttribute="centerX" id="ffm-V8-ApJ"/>
+                            <constraint firstItem="vtl-7M-nXx" firstAttribute="trailing" secondItem="tGC-55-yqF" secondAttribute="trailing" id="nM6-VG-65O"/>
                             <constraint firstItem="ACn-zK-VQa" firstAttribute="top" secondItem="tGC-55-yqF" secondAttribute="bottom" id="ug1-Lr-xaB"/>
                         </constraints>
                     </view>
@@ -681,13 +681,13 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="PD6-M5-SBK"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="bWv-Qs-oLQ"/>
+                        <viewLayoutGuide key="safeArea" id="xNC-ta-e8I"/>
                         <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Wty-if-kIf" firstAttribute="leading" secondItem="bWv-Qs-oLQ" secondAttribute="leading" id="HLo-Uv-z3I"/>
-                            <constraint firstItem="bWv-Qs-oLQ" firstAttribute="bottom" secondItem="Wty-if-kIf" secondAttribute="bottom" id="Nl8-eN-FWo"/>
-                            <constraint firstItem="bWv-Qs-oLQ" firstAttribute="trailing" secondItem="Wty-if-kIf" secondAttribute="trailing" id="RrQ-Ue-Dvm"/>
-                            <constraint firstItem="Wty-if-kIf" firstAttribute="top" secondItem="bWv-Qs-oLQ" secondAttribute="top" id="jBZ-nz-rFi"/>
+                            <constraint firstItem="Wty-if-kIf" firstAttribute="leading" secondItem="xNC-ta-e8I" secondAttribute="leading" id="HLo-Uv-z3I"/>
+                            <constraint firstItem="xNC-ta-e8I" firstAttribute="bottom" secondItem="Wty-if-kIf" secondAttribute="bottom" id="Nl8-eN-FWo"/>
+                            <constraint firstItem="xNC-ta-e8I" firstAttribute="trailing" secondItem="Wty-if-kIf" secondAttribute="trailing" id="RrQ-Ue-Dvm"/>
+                            <constraint firstItem="Wty-if-kIf" firstAttribute="top" secondItem="xNC-ta-e8I" secondAttribute="top" id="jBZ-nz-rFi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Am-g4-SQN">
@@ -732,13 +732,13 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="cc2-gS-min"/>
+                        <viewLayoutGuide key="safeArea" id="e4d-Zb-eVP"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="26J-x6-uCC" firstAttribute="top" secondItem="cc2-gS-min" secondAttribute="top" id="Fmj-tc-4cM"/>
-                            <constraint firstItem="26J-x6-uCC" firstAttribute="leading" secondItem="cc2-gS-min" secondAttribute="leading" id="KIk-HJ-0kg"/>
-                            <constraint firstItem="cc2-gS-min" firstAttribute="bottom" secondItem="26J-x6-uCC" secondAttribute="bottom" id="d9b-9U-PE2"/>
-                            <constraint firstItem="cc2-gS-min" firstAttribute="trailing" secondItem="26J-x6-uCC" secondAttribute="trailing" id="nCH-vH-zkB"/>
+                            <constraint firstItem="26J-x6-uCC" firstAttribute="top" secondItem="e4d-Zb-eVP" secondAttribute="top" id="Fmj-tc-4cM"/>
+                            <constraint firstItem="26J-x6-uCC" firstAttribute="leading" secondItem="e4d-Zb-eVP" secondAttribute="leading" id="KIk-HJ-0kg"/>
+                            <constraint firstItem="e4d-Zb-eVP" firstAttribute="bottom" secondItem="26J-x6-uCC" secondAttribute="bottom" id="d9b-9U-PE2"/>
+                            <constraint firstItem="e4d-Zb-eVP" firstAttribute="trailing" secondItem="26J-x6-uCC" secondAttribute="trailing" id="nCH-vH-zkB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mch-Sq-Vug"/>
@@ -839,18 +839,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="jWc-Df-N1b"/>
+                        <viewLayoutGuide key="safeArea" id="ADT-3b-0Di"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="jWc-Df-N1b" firstAttribute="bottom" secondItem="K6j-Wm-3qu" secondAttribute="bottom" constant="16" id="5KB-AA-X6w"/>
-                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="top" secondItem="jWc-Df-N1b" secondAttribute="top" id="C18-Vl-9NE"/>
-                            <constraint firstItem="K6j-Wm-3qu" firstAttribute="leading" secondItem="jWc-Df-N1b" secondAttribute="leading" constant="16" id="F6P-EL-Zum"/>
-                            <constraint firstItem="jWc-Df-N1b" firstAttribute="trailing" secondItem="MQR-Wz-fTI" secondAttribute="trailing" constant="16" id="GI3-RW-dWe"/>
+                            <constraint firstItem="ADT-3b-0Di" firstAttribute="bottom" secondItem="K6j-Wm-3qu" secondAttribute="bottom" constant="16" id="5KB-AA-X6w"/>
+                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="top" secondItem="ADT-3b-0Di" secondAttribute="top" id="C18-Vl-9NE"/>
+                            <constraint firstItem="K6j-Wm-3qu" firstAttribute="leading" secondItem="ADT-3b-0Di" secondAttribute="leading" constant="16" id="F6P-EL-Zum"/>
+                            <constraint firstItem="ADT-3b-0Di" firstAttribute="trailing" secondItem="MQR-Wz-fTI" secondAttribute="trailing" constant="16" id="GI3-RW-dWe"/>
                             <constraint firstItem="K6j-Wm-3qu" firstAttribute="top" secondItem="Hdj-f1-jvj" secondAttribute="bottom" constant="16" id="LXu-2S-UNf"/>
-                            <constraint firstItem="jWc-Df-N1b" firstAttribute="trailing" secondItem="K6j-Wm-3qu" secondAttribute="trailing" constant="16" id="bND-Ka-dTK"/>
-                            <constraint firstItem="MQR-Wz-fTI" firstAttribute="top" secondItem="jWc-Df-N1b" secondAttribute="top" constant="16" id="hpV-LO-ZlC"/>
-                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="trailing" secondItem="jWc-Df-N1b" secondAttribute="trailing" id="oBu-y8-rvG"/>
-                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="leading" secondItem="jWc-Df-N1b" secondAttribute="leading" id="xb1-rI-G0n"/>
+                            <constraint firstItem="ADT-3b-0Di" firstAttribute="trailing" secondItem="K6j-Wm-3qu" secondAttribute="trailing" constant="16" id="bND-Ka-dTK"/>
+                            <constraint firstItem="MQR-Wz-fTI" firstAttribute="top" secondItem="ADT-3b-0Di" secondAttribute="top" constant="16" id="hpV-LO-ZlC"/>
+                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="trailing" secondItem="ADT-3b-0Di" secondAttribute="trailing" id="oBu-y8-rvG"/>
+                            <constraint firstItem="Hdj-f1-jvj" firstAttribute="leading" secondItem="ADT-3b-0Di" secondAttribute="leading" id="xb1-rI-G0n"/>
                         </constraints>
                     </view>
                     <connections>
@@ -884,13 +884,13 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="3xp-Rg-uBS"/>
+                        <viewLayoutGuide key="safeArea" id="O2C-1H-4Va"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3xp-Rg-uBS" firstAttribute="bottom" secondItem="Gp9-tr-OUh" secondAttribute="bottom" id="DBJ-K1-1xB"/>
-                            <constraint firstItem="Gp9-tr-OUh" firstAttribute="top" secondItem="3xp-Rg-uBS" secondAttribute="top" id="Hr2-FA-fyA"/>
-                            <constraint firstItem="Gp9-tr-OUh" firstAttribute="leading" secondItem="3xp-Rg-uBS" secondAttribute="leading" id="LbQ-Oy-5il"/>
-                            <constraint firstItem="3xp-Rg-uBS" firstAttribute="trailing" secondItem="Gp9-tr-OUh" secondAttribute="trailing" id="XWg-gz-lkU"/>
+                            <constraint firstItem="O2C-1H-4Va" firstAttribute="bottom" secondItem="Gp9-tr-OUh" secondAttribute="bottom" id="DBJ-K1-1xB"/>
+                            <constraint firstItem="Gp9-tr-OUh" firstAttribute="top" secondItem="O2C-1H-4Va" secondAttribute="top" id="Hr2-FA-fyA"/>
+                            <constraint firstItem="Gp9-tr-OUh" firstAttribute="leading" secondItem="O2C-1H-4Va" secondAttribute="leading" id="LbQ-Oy-5il"/>
+                            <constraint firstItem="O2C-1H-4Va" firstAttribute="trailing" secondItem="Gp9-tr-OUh" secondAttribute="trailing" id="XWg-gz-lkU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -943,13 +943,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="nsC-8E-QK3"/>
+                        <viewLayoutGuide key="safeArea" id="6Mb-Dm-AFr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PEI-c2-ho7" firstAttribute="top" secondItem="FRy-6f-i7o" secondAttribute="top" id="ooh-S3-7hx"/>
-                            <constraint firstItem="PEI-c2-ho7" firstAttribute="leading" secondItem="nsC-8E-QK3" secondAttribute="leading" id="x9c-F3-8Ur"/>
-                            <constraint firstItem="PEI-c2-ho7" firstAttribute="trailing" secondItem="nsC-8E-QK3" secondAttribute="trailing" id="xWS-fa-a8N"/>
-                            <constraint firstItem="PEI-c2-ho7" firstAttribute="bottom" secondItem="nsC-8E-QK3" secondAttribute="bottom" id="yCL-3X-zVa"/>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="leading" secondItem="6Mb-Dm-AFr" secondAttribute="leading" id="x9c-F3-8Ur"/>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="trailing" secondItem="6Mb-Dm-AFr" secondAttribute="trailing" id="xWS-fa-a8N"/>
+                            <constraint firstItem="PEI-c2-ho7" firstAttribute="bottom" secondItem="6Mb-Dm-AFr" secondAttribute="bottom" id="yCL-3X-zVa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VIV-RY-6PJ">

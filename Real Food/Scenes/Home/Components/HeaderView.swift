@@ -15,15 +15,6 @@ protocol HeaderViewDelegate: AnyObject {
 class HeaderView: UIView {
     var delegate: HeaderViewDelegate?
     
-    private struct Strings {
-        static let title: String = "O que temos para hoje?"
-        static let qrCodeIcon = "qrcode"
-        static let qrCodeText = "QRCode"
-        
-        static let searchRestaurantsIcon = "magnifyingglass"
-        static let searchRestaurantsText = "Buscar restautante"
-    }
-    
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +31,7 @@ class HeaderView: UIView {
     }()
     
     private var qrCodeButton: HeaderViewButton = {
-        let view = HeaderViewButton(title: Strings.qrCodeText, icon: Strings.qrCodeIcon)
+        let view = HeaderViewButton(title: Strings.Home.HeaderView.qrCodeText, icon: Strings.Home.HeaderView.qrCodeIcon)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setupView()
         view.backgroundColor = Theme.componentForegroundColor
@@ -50,7 +41,7 @@ class HeaderView: UIView {
     }()
     
     private var searchRestaurantButton: HeaderViewButton = {
-        let view = HeaderViewButton(title: Strings.searchRestaurantsText, icon: Strings.searchRestaurantsIcon)
+        let view = HeaderViewButton(title: Strings.Home.HeaderView.searchRestaurantsText, icon: Strings.Home.HeaderView.searchRestaurantsIcon)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setupView()
         view.backgroundColor = Theme.componentForegroundColor

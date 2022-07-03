@@ -19,10 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             let navController = UINavigationController()
-            navController.setViewControllers([OnboardingViewController.instantiate()], animated: true)
+            onboarding(navController: navController)
             window.rootViewController = navController
             self.window = window
             window.makeKeyAndVisible()
+        }
+    }
+    
+    func onboarding(navController: UINavigationController) {
+        let isFirstAccess = !UserDefaults.standard.bool(forKey: Strings.UserDefaultKeys.presentedOnboarding)
+        if isFirstAccess {
+            UserDefaults.standard.setValue(true, forKey: Strings.UserDefaultKeys.presentedOnboarding)
+            navController.setViewControllers([OnboardingViewController.instantiate()], animated: true)
+        } else {
+            navController.setViewControllers([HomeViewController()], animated: true)
         }
     }
 

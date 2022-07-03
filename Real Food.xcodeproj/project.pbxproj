@@ -35,6 +35,7 @@
 		AA5B5BDA276B87200042585F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5B5BD9276B87200042585F /* GoogleService-Info.plist */; };
 		AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */; };
 		AA7BEFF02762B0D600E89996 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */; };
+		AA85BC9A28713DF700AA7574 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA85BC9928713DF700AA7574 /* Strings.swift */; };
 		AA948A3027DB0B3F00FE81E3 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A2F27DB0B3F00FE81E3 /* EditAccountViewController.swift */; };
 		AA948A3227DB0B5700FE81E3 /* EditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */; };
 		AA948A3427DB0B7100FE81E3 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */; };
@@ -96,6 +97,7 @@
 		AA5B5BD9276B87200042585F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA7BEFEC2762A6C300E89996 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		AA7BEFEF2762B0D600E89996 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AA85BC9928713DF700AA7574 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		AA948A2F27DB0B3F00FE81E3 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		AA948A3127DB0B5700FE81E3 /* EditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountView.swift; sourceTree = "<group>"; };
 		AA948A3327DB0B7100FE81E3 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,16 +240,6 @@
 			path = ListDishes;
 			sourceTree = "<group>";
 		};
-		AA43CF4727FA9D3B005E8CD2 /* BaseView */ = {
-			isa = PBXGroup;
-			children = (
-				AA43CF4C27FAA206005E8CD2 /* Theme.swift */,
-				AA43CF4827FA9D59005E8CD2 /* BaseView.swift */,
-				AA43CF4A27FA9D71005E8CD2 /* BaseViewController.swift */,
-			);
-			path = BaseView;
-			sourceTree = "<group>";
-		};
 		AA4A8F7D276781B500AA9A95 /* DishLandscapeCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +301,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AA85BC9828713A5000AA7574 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				AA43CF4C27FAA206005E8CD2 /* Theme.swift */,
+				AA43CF4827FA9D59005E8CD2 /* BaseView.swift */,
+				AA43CF4A27FA9D71005E8CD2 /* BaseViewController.swift */,
+				AA85BC9928713DF700AA7574 /* Strings.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		AA948A2E27DB091200FE81E3 /* EditAccoount */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +352,7 @@
 		AAA8C07F27610EB3001CB8C8 /* Real Food */ = {
 			isa = PBXGroup;
 			children = (
+				AA85BC9828713A5000AA7574 /* Commons */,
 				AAA8C08027610EB3001CB8C8 /* AppDelegate.swift */,
 				AAA8C08227610EB3001CB8C8 /* SceneDelegate.swift */,
 				AA7BEFEE2762B0A900E89996 /* Extensions */,
@@ -385,7 +389,6 @@
 		AAD8C8E327F51C3600902739 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AA43CF4727FA9D3B005E8CD2 /* BaseView */,
 				AA189B5B276386CE005B650E /* Onboarding */,
 				AA189B5F2763873C005B650E /* Home */,
 				AA0056DE27D985C70053CEF6 /* UserMenu */,
@@ -634,6 +637,7 @@
 				AA7BEFED2762A6C300E89996 /* OnboardingViewController.swift in Sources */,
 				AA189B752763D140005B650E /* CategoryCollectionViewCell.swift in Sources */,
 				AAE03AE0278C7E8D00F9D92B /* SpinnerViewController.swift in Sources */,
+				AA85BC9A28713DF700AA7574 /* Strings.swift in Sources */,
 				AAA8C08527610EB3001CB8C8 /* LoginViewController.swift in Sources */,
 				AA0056E027D985FB0053CEF6 /* UserMenuTableViewCell.swift in Sources */,
 				AA5B14FD276A6D460009B7A1 /* Order.swift in Sources */,
