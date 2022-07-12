@@ -37,7 +37,7 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1{
-            let controller = HomeViewController()
+            let controller = HomeViewController(restaurantViewModel: RestaurantsViewModel())
             navigationController?.pushViewController(controller, animated: true)
         } else {
             currentPage += 1

@@ -11,10 +11,20 @@ import AVFoundation
 
 class HomeViewController: BaseViewController {
     private var scanner: Scanner?
+    private var restaurantViewModel: RestaurantsViewModel
+    
+    init(restaurantViewModel: RestaurantsViewModel) {
+        self.restaurantViewModel = restaurantViewModel
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupNavigationController()
     }
     
@@ -28,9 +38,25 @@ class HomeViewController: BaseViewController {
         view = homeView
     }
     
-    private let homeView: HomeView = {
-       return HomeView()
+    private lazy var homeView: HomeView = {
+        return HomeView(restaurantViewModel: self.restaurantViewModel)
     }()
+    
+    override func bindViewModel() {
+        restaurantViewModel.state.bind { [weak self] in
+            guard let state = $0 else { return }
+            switch state {
+            case .data:
+                self?.restaurantViewModel.cellType.value = .dataCell
+                self?.homeView.restaurantsExampleView.cardsTableView.reloadData()
+            case .loading:
+                self?.restaurantViewModel.cellType.value = .shimmerCell
+                self?.homeView.restaurantsExampleView.cardsTableView.reloadData()
+            case .error(_):
+                return
+            }
+        }
+    }
 }
 
 
@@ -46,13 +72,13 @@ extension HomeViewController: RestaurantsExampleViewDelegate {
 
 extension HomeViewController: HeaderViewDelegate {
     func openScannerView() {
-//        print("michael", navigationController)
+        //        print("michael", navigationController)
         let vc = CatchRestaurantNameViewController.instantiate()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func openSearchRestaurant() {
-//        delegate?.openSearchRestaurant()
+        //        delegate?.openSearchRestaurant()
     }
     
     func openRestaurantMenu(name: String) {

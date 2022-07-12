@@ -36,7 +36,7 @@ extension UIViewController {
 
 extension UINavigationController {
     func goToInitial() {
-        let controller = HomeViewController()
+        let controller = HomeViewController(restaurantViewModel: RestaurantsViewModel())
         self.setViewControllers([controller], animated: true)
     }
 }

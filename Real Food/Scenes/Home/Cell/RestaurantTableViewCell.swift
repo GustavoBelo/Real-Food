@@ -14,12 +14,11 @@ import UIKit
 class RestaurantTableViewCell: UITableViewCell {
     
     static let cellId = "restaurantTableViewCell"
-    //    var delegate: RestaurantTableViewCellDelegate!
-    private var restaurantTitle: String?
+    var restaurantTitle: String?
     private var restaurantBranchName: String?
     private var category: String?
     private var openingHoursString: String?
-    //    private var distancy:
+    private var imageLink: String?
     
     private let content: UIView = {
         let view = UIView()
@@ -43,7 +42,7 @@ class RestaurantTableViewCell: UITableViewCell {
         return image
     }()
     
-    let restaurantTitleLabel: UILabel = {
+    private let restaurantTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -96,7 +95,8 @@ class RestaurantTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCell(restaurantName: String, restaurantBranch: String,category: String, openingHours: String) {
+    func setupCell(imageLink: String, restaurantName: String, restaurantBranch: String,category: String, openingHours: String) {
+        self.imageLink = imageLink
         self.restaurantTitle = restaurantName
         self.restaurantBranchName = restaurantBranch
         self.category = category
@@ -110,7 +110,7 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     private func setupComponents() {
-        imageIcon.load(url: URL(string: "https://iguatemi.com.br/galleriashopping/sites/galleriashopping/files/logo-1360167508740.png")!)
+        imageIcon.load(url: URL(string: imageLink ?? "https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png")!)
         
         restaurantTitleLabel.text = restaurantTitle
         restaurantBranch.text = restaurantBranchName

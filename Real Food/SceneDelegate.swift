@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UserDefaults.standard.setValue(true, forKey: Strings.UserDefaultKeys.presentedOnboarding)
             navController.setViewControllers([OnboardingViewController.instantiate()], animated: true)
         } else {
-            navController.setViewControllers([HomeViewController()], animated: true)
+            navController.setViewControllers([HomeViewController(restaurantViewModel: RestaurantsViewModel())], animated: true)
         }
     }
 

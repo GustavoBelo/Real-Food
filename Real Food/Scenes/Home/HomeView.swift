@@ -11,6 +11,8 @@ class HomeView: BaseView {
     
     weak var delegate: HomeViewController?
     
+    var restaurantViewModel: RestaurantsViewModel
+    
     let scrollView: UIScrollView = {
         let view = UIScrollView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -31,12 +33,23 @@ class HomeView: BaseView {
         return view
     }()
     
-    var restaurantsExampleView: RestaurantsExampleView =  {
-        let view = RestaurantsExampleView(title: Strings.Home.restaurantsExampleView.title, seeMoreText: Strings.Home.restaurantsExampleView.seeMoreText)
+    lazy var restaurantsExampleView: RestaurantsExampleView =  {
+        let view = RestaurantsExampleView(title: Strings.Home.restaurantsExampleView.title,
+                                          seeMoreText: Strings.Home.restaurantsExampleView.seeMoreText,
+                                          viewModel: self.restaurantViewModel)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setupView()
         return view
     }()
+    
+    init(restaurantViewModel: RestaurantsViewModel) {
+        self.restaurantViewModel = restaurantViewModel
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func setupView() {
         self.backgroundColor = Theme.backgroundColor

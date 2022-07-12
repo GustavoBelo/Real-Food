@@ -19,15 +19,12 @@ class RestaurantsExampleView: UIView {
     var seeMoreText: String
     
     weak var delegate: RestaurantsExampleViewDelegate?
+    var viewModel: RestaurantsViewModel
     
-    private let db = Firestore.firestore()
-    
-    var restaurantsCellsData = [String() : String()]
-    
-    init(title: String, seeMoreText: String) {
+    init(title: String, seeMoreText: String, viewModel: RestaurantsViewModel) {
         self.title = title
         self.seeMoreText = seeMoreText
-        
+        self.viewModel = viewModel
         super.init(frame: .zero)
     }
     
@@ -59,20 +56,20 @@ class RestaurantsExampleView: UIView {
         return view
     }()
     
-    private var cardsTableView: UITableView = {
+    var cardsTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.isScrollEnabled = false
         return tableView
     }()
     
-    private func setupElements() { // michael jackson fazer aqui
+    private func setupElements() {
         titleLabel.text = title
         setupSpecialText()
     }
     
     func setupView() {
-        setupCells() // vou ter que fazer o bind e o shemmer pra ca
+        viewModel.setupCells()
         setupElements()
         addSubviews()
         setupTableView()
@@ -80,10 +77,9 @@ class RestaurantsExampleView: UIView {
     }
     
     private func setupTableView() {
-        //michael jackson restaurant
         cardsTableView.register(RestaurantTableViewCell.self, forCellReuseIdentifier: RestaurantTableViewCell.cellId)
+        cardsTableView.register(ShimmerRestaurantTableViewCell.self, forCellReuseIdentifier: ShimmerRestaurantTableViewCell.cellId)
         
-//        cardsTableView.register(ShimmerRestaurantTableViewCell.self, forCellReuseIdentifier: ShimmerRestaurantTableViewCell.cellId)
         cardsTableView.dataSource = self
         cardsTableView.delegate = self
         
@@ -117,36 +113,29 @@ class RestaurantsExampleView: UIView {
 }
 
 extension RestaurantsExampleView: UITableViewDataSource, UITableViewDelegate {
-    private func setupCells() {
-        db.collection(Restaurants.identifierGroup).getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    self.restaurantsCellsData.updateValue(document.documentID, forKey: Restaurants.name)
-                    print("michael jackson\(document.documentID)")
-                }
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.cellId) as? RestaurantTableViewCell
-        var titles = [String]()
-                for (key, value) in self.restaurantsCellsData {
-                    titles.append(value)
-                }
-                print(self.restaurantsCellsData, "dict")
-
-        print("michael", title)
-        cell?.setupCell(restaurantName: "Vivenda do camarão", restaurantBranch: "Shopping ABC", category: "Frutos do mar", openingHours: "10:00 - 23:00")
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: ShimmerRestaurantTableViewCell.cellId) as? ShimmerRestaurantTableViewCell
-        
+        if self.viewModel.cellType.value == .dataCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.cellId) as? RestaurantTableViewCell
+            
+            var strings = [String() : String()]
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.name]!, forKey: Restaurants.Document.name)
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.Branches.identifier]!, forKey: Restaurants.Document.Branches.identifier)
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.Branches.Document.Days.openingHours]!, forKey: Restaurants.Document.Branches.Document.Days.openingHours)
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.category]!, forKey: Restaurants.category)
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.image]!, forKey: Restaurants.image)
+            
+            cell?.setupCell(imageLink: strings[Restaurants.image]!,
+                            restaurantName: strings[Restaurants.Document.name]!,
+                            restaurantBranch: strings[Restaurants.Document.Branches.identifier]!,
+                            category: strings[Restaurants.category]!,
+                            openingHours: strings[Restaurants.Document.Branches.Document.Days.openingHours]!)
+            return cell ?? UITableViewCell()
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: ShimmerRestaurantTableViewCell.cellId) as? ShimmerRestaurantTableViewCell
         return cell ?? UITableViewCell()
     }
     
@@ -155,9 +144,11 @@ extension RestaurantsExampleView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.cellId) as? RestaurantTableViewCell
-        let restaurantName = cell?.restaurantTitleLabel.text ?? "Vivenda do camarão"
+        guard let cell = tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell,
+              let restaurantName = cell.restaurantTitle,
+              let delegate = self.delegate
+        else { return }
+        delegate.openRestaurantMenu(name: restaurantName)
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate?.openRestaurantMenu(name: restaurantName)
     }
 }

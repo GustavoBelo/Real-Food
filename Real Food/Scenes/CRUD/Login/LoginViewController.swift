@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    let controller = HomeViewController()
+                    let controller = HomeViewController(restaurantViewModel: RestaurantsViewModel())
                     self.navigationController?.setViewControllers([controller], animated:true)
                 }
             }

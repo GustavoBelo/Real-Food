@@ -44,7 +44,6 @@ extension CatchRestaurantNameViewController: AVCaptureMetadataOutputObjectsDeleg
         let controller = MenuViewController.instantiate()
         navigationController?.title = code
         navigationController?.pushViewController(controller, animated: true)
-        
     }
     
 }
