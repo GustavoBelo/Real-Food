@@ -80,11 +80,11 @@ extension ListDishesViewController {
                     if category.dishes.contains(dish.key) {
                         guard let newDish = dish.value as? [String : Any] else { return }
                         let finalDish = Dish(id: dish.key,
-                                             name: newDish[Dish.K.name] as? String,
-                                             image: newDish[Dish.K.image] as? String,
-                                             description: newDish[Dish.K.description] as? String,
-                                             ARModel: newDish[Dish.K.ARModel] as? String,
-                                             calories: newDish[Dish.K.calories] as? Int ?? 0)
+                                             name: (newDish[Dish.K.name] as? String)!,
+                                             description: (newDish[Dish.K.image] as? String)!,
+                                             ARModel: (newDish[Dish.K.description] as? String)!,
+                                             price: (newDish[Dish.K.ARModel] as? String)!,
+                                             image: newDish[Dish.K.price] as? String ?? "0")
                         
                         self.dishes.append(finalDish)
                         DispatchQueue.main.async {

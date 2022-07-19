@@ -56,7 +56,7 @@ extension UserMenuViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: UserMenuTableViewCell.cellId, for: indexPath) as? UserMenuTableViewCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: UserMenuTableViewCell.identifier, for: indexPath) as? UserMenuTableViewCell{
             setupCell(to: cell, at: indexPath.row)
             return cell
         }

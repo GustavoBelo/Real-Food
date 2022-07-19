@@ -8,8 +8,6 @@
 import UIKit
 
 class SettingsTableViewCell: BaseTableViewCell {
-
-    static let cellId = "settingsTableViewCell"
     var delegate: EditAccountViewController!
     
     override func setupView() {

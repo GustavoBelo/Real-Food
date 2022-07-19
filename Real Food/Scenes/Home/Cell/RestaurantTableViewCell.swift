@@ -12,13 +12,13 @@ import UIKit
 //}
 
 class RestaurantTableViewCell: UITableViewCell {
-    
-    static let cellId = "restaurantTableViewCell"
     var restaurantTitle: String?
     private var restaurantBranchName: String?
     private var category: String?
     private var openingHoursString: String?
     private var imageLink: String?
+    var restaurantID: String?
+    var branchID: String?
     
     private let content: UIView = {
         let view = UIView()
@@ -95,10 +95,12 @@ class RestaurantTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCell(imageLink: String, restaurantName: String, restaurantBranch: String,category: String, openingHours: String) {
+    func setupCell(imageLink: String, restaurantName: String, restaurantBranch: String, restaurantID: String, branchID: String, category: String, openingHours: String) {
         self.imageLink = imageLink
         self.restaurantTitle = restaurantName
         self.restaurantBranchName = restaurantBranch
+        self.restaurantID = restaurantID
+        self.branchID = branchID
         self.category = category
         self.openingHoursString = openingHours
         setupComponents()
@@ -110,7 +112,7 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     private func setupComponents() {
-        imageIcon.load(url: URL(string: imageLink ?? "https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png")!)
+        imageIcon.load(url: URL(string: imageLink ?? Strings.notFoundImage)!)
         
         restaurantTitleLabel.text = restaurantTitle
         restaurantBranch.text = restaurantBranchName

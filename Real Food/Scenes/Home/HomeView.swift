@@ -126,7 +126,7 @@ extension HomeView: RestaurantsExampleViewDelegate {
         delegate?.showRestaurantsNearby()
     }
     
-    func openRestaurantMenu(name: String) {
-        delegate?.openRestaurantMenu(name: name)
+    func openRestaurantMenu(restaurantID: String, branchID: String) {
+        delegate?.openRestaurantMenu(restaurantID: restaurantID, branchID: branchID)
     }
 }

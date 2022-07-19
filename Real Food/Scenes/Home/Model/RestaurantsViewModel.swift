@@ -19,9 +19,9 @@ enum CellType {
     case dataCell
 }
 
-protocol RestaurantsViewModelProtocol: AnyObject {
+protocol RestaurantsViewModelProtocol: RestaurantsViewModel {
     var state: Bindable<RestaurantsViewModelState?> { get }
-    func setupCells()
+    func setupCellsData()
 }
 
 class RestaurantsViewModel: RestaurantsViewModelProtocol {
@@ -31,7 +31,7 @@ class RestaurantsViewModel: RestaurantsViewModelProtocol {
     let db = Firestore.firestore()
     var restaurantsCellsData = [0 : [String() : String()]]
     
-    func setupCells() {
+    func setupCellsData() {
         var howManyRestaurants = 0
         db.collection(Restaurants.identifierGroup).getDocuments { (querySnapshot, err) in
             if let err = err {
@@ -50,9 +50,12 @@ class RestaurantsViewModel: RestaurantsViewModelProtocol {
                                   let openingHours = querySnapshot!.documents[howManyRestaurants][Restaurants.Document.Branches.Document.Days.openingHours] as? [String : String],
                                   let todayOpeningHours = openingHours[self.dayOfWeek()]
                             else { return }
+                            let branchID = querySnapshot!.documents[howManyRestaurants].documentID
                             
                             self.restaurantsCellsData.updateValue([Restaurants.Document.name : dataName,
                                                                    Restaurants.Document.Branches.identifier : branch,
+                                                                   Restaurants.id : document.documentID,
+                                                                   Restaurants.Document.Branches.id : branchID,
                                                                    Restaurants.image : restaurantImage,
                                                                    Restaurants.Document.Branches.Document.Days.openingHours : todayOpeningHours,
                                                                    Restaurants.category : restaurantCategory ],
@@ -71,10 +74,5 @@ class RestaurantsViewModel: RestaurantsViewModelProtocol {
     private func dayOfWeek() -> String {
         let f = DateFormatter()
         return f.weekdaySymbols[Calendar.current.component(.weekday, from: Date()) - 1].lowercased()
-    }
-    
-    //    private isTodayAHoliday() -> Bool {
-    //        return false
-    //    }
-    
+    }    
 }

@@ -55,10 +55,10 @@ class ListOrdersViewController: UIViewController {
                     guard let dish = order[Dish.K.dish] as? [String : Any] else { return }
                     let dishOrder = Dish(id: dish[Dish.K.id] as? String,
                                          name: dish[Dish.K.name] as? String,
-                                         image: dish[Dish.K.image] as? String,
-                                         description: dish[Dish.K.description] as? String,
-                                         ARModel: dish[Dish.K.ARModel] as? String,
-                                         calories: dish[Dish.K.calories] as? Int ?? 0)
+                                         description: (dish[Dish.K.image] as? String)!,
+                                         ARModel: dish[Dish.K.description] as? String,
+                                         price: dish[Dish.K.ARModel] as? String,
+                                         image: dish[Dish.K.price] as? String ?? "0")
                     
                     let newOrder = Order(name: table,
                                          sender: sender,

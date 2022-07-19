@@ -8,8 +8,6 @@
 import UIKit
 
 class UserMenuTableViewCell: BaseTableViewCell {
-
-    static let cellId = "userTableViewCell"
     var delegate: UserMenuViewController!
     
     override func setupView() {

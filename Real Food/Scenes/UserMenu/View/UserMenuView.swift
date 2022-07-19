@@ -25,7 +25,7 @@ class UserMenuView: UIView {
     }
     
     private func setTableView() {
-        menuTableView.register(UserMenuTableViewCell.self, forCellReuseIdentifier: UserMenuTableViewCell.cellId)
+        menuTableView.register(UserMenuTableViewCell.self, forCellReuseIdentifier: UserMenuTableViewCell.identifier)
     }
     
     private func addSubviews() {

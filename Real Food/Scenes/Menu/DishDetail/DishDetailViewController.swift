@@ -49,7 +49,7 @@ class DishDetailViewController: UIViewController {
     private func populateView() {
         dish.setup(title: titleLbl,
                    imageView: dishImageView,
-                   calories: caloriesLbl,
+                   price: caloriesLbl,
                    description: descriptionLbl)
     }
     
@@ -92,12 +92,12 @@ class DishDetailViewController: UIViewController {
                 Order.K.sender : sender,
                 Order.K.table : table,
                 Dish.K.dish : [
-                    Dish.K.id: dish.id!,
-                    Dish.K.image: dish.image!,
-                    Dish.K.description : dish.description!,
-                    Dish.K.name : dish.name!,
+                    Dish.K.id: dish.id,
+                    Dish.K.image: dish.image,
+                    Dish.K.description : dish.description,
+                    Dish.K.name : dish.name,
                     Dish.K.ARModel : dish.ARModel as Any,
-                    Dish.K.calories : dish.calories ?? 0
+                    Dish.K.price : dish.price ?? 0
                 ]
             ]
         ]) { (error) in

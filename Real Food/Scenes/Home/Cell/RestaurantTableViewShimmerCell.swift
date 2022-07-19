@@ -1,5 +1,5 @@
 //
-//  ShimmerRestaurantTableViewCell.swift
+//  RestaurantTableViewShimmerCell.swift
 //  Real Food
 //
 //  Created by Gustavo Belo on 24/05/22.
@@ -8,9 +8,7 @@
 import UIKit
 import SwiftUI
 
-class ShimmerRestaurantTableViewCell: UITableViewCell {
-    
-    static let cellId = "shimmerRestaurantTableViewCell"
+class RestaurantTableViewShimmerCell: UITableViewCell {
     
     private let content: UIView = {
         let view = UIView()

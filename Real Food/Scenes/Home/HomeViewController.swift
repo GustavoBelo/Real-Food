@@ -52,8 +52,8 @@ class HomeViewController: BaseViewController {
             case .loading:
                 self?.restaurantViewModel.cellType.value = .shimmerCell
                 self?.homeView.restaurantsExampleView.cardsTableView.reloadData()
-            case .error(_):
-                return
+            case .error(let message):
+                print("michael jackson falhou: ", message)
             }
         }
     }
@@ -72,7 +72,6 @@ extension HomeViewController: RestaurantsExampleViewDelegate {
 
 extension HomeViewController: HeaderViewDelegate {
     func openScannerView() {
-        //        print("michael", navigationController)
         let vc = CatchRestaurantNameViewController.instantiate()
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -81,9 +80,10 @@ extension HomeViewController: HeaderViewDelegate {
         //        delegate?.openSearchRestaurant()
     }
     
-    func openRestaurantMenu(name: String) {
+    func openRestaurantMenu(restaurantID: String, branchID: String) {
         let controller = MenuViewController.instantiate()
-        navigationController?.title = name
+        controller.restaurantID = restaurantID
+        controller.branchID = branchID
         navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -16,6 +16,7 @@ struct Restaurants {
         struct Branches {
             static let identifier = "branch"
             static let identifierGroup = String(describing: Self.self)
+            static let id = "branchID"
             struct Document {
                 static let classifications = "classifications"
                 struct Dishes {
@@ -44,11 +45,14 @@ struct Restaurants {
         static let payments = "payments"
     }
     
+    static let id = "restaurantID"
     static let category = "category"
     static let categories = "categories"
     static let dishes = "dishes"
+    static let dish = "Dishes"
     static let image = "image"
     static let name = "name"
+    static let sales = "sales"
     static let populars = "populars"
     static let specials = "specials"
 }

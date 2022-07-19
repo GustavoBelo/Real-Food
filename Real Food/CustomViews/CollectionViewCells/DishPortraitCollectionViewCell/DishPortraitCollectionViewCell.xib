@@ -37,7 +37,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-3C-83q">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-3C-83q">
                                         <rect key="frame" x="0.0" y="274" width="164" height="2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.877162993" green="0.22861853239999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,9 +73,9 @@
             </constraints>
             <size key="customSize" width="186" height="268"/>
             <connections>
-                <outlet property="caloriesLbl" destination="xZO-3C-83q" id="uCx-KQ-XDh"/>
                 <outlet property="descriptionLbl" destination="SDC-tZ-BId" id="bb2-z1-R7T"/>
                 <outlet property="dishImageView" destination="WbF-FJ-rKL" id="4HE-Nv-56e"/>
+                <outlet property="priceLbl" destination="xZO-3C-83q" id="uCx-KQ-XDh"/>
                 <outlet property="titleLbl" destination="uT7-0y-YyQ" id="UHh-17-JcP"/>
             </connections>
             <point key="canvasLocation" x="230.43478260869566" y="161.38392857142856"/>

@@ -15,12 +15,12 @@ class DishListTableViewCell: UITableViewCell {
     func setup(dish: Dish) {
         dish.setup(title: titleLbl,
                    imageView: dishImageView,
-                   calories: nil,
+                   price: nil,
                    description: descriptionLbl)
     }
     
     func setup(order: Order) {
-        dishImageView.kf.setImage(with: order.dish?.image?.asUrl)
+        dishImageView.kf.setImage(with: order.dish?.image.asUrl)
         titleLbl.text = order.dish?.name
         descriptionLbl.text = order.name
     }

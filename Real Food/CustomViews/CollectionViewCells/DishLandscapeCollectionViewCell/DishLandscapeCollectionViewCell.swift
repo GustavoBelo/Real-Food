@@ -11,12 +11,12 @@ class DishLandscapeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var dishImageView: UIImageView!
     @IBOutlet private weak var titleLbl: UILabel!
     @IBOutlet private weak var descriptionLbl: UILabel!
-    @IBOutlet private weak var caloriesLbl: UILabel!
+    @IBOutlet private weak var priceLbl: UILabel!
     
     func setup(dish: Dish) {
         dish.setup(title: titleLbl,
                    imageView: dishImageView,
-                   calories: caloriesLbl,
+                   price: priceLbl,
                    description: descriptionLbl)
     }
     

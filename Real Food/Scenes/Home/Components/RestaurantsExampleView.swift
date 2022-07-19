@@ -11,7 +11,7 @@ import Firebase
 protocol RestaurantsExampleViewDelegate: AnyObject {
     func showRestaurantsList()
     func showRestaurantsNearby()
-    func openRestaurantMenu(name: String)
+    func openRestaurantMenu(restaurantID: String, branchID: String)
 }
 
 class RestaurantsExampleView: UIView {
@@ -69,7 +69,7 @@ class RestaurantsExampleView: UIView {
     }
     
     func setupView() {
-        viewModel.setupCells()
+        viewModel.setupCellsData()
         setupElements()
         addSubviews()
         setupTableView()
@@ -77,8 +77,8 @@ class RestaurantsExampleView: UIView {
     }
     
     private func setupTableView() {
-        cardsTableView.register(RestaurantTableViewCell.self, forCellReuseIdentifier: RestaurantTableViewCell.cellId)
-        cardsTableView.register(ShimmerRestaurantTableViewCell.self, forCellReuseIdentifier: ShimmerRestaurantTableViewCell.cellId)
+        cardsTableView.register(RestaurantTableViewCell.self, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
+        cardsTableView.register(RestaurantTableViewShimmerCell.self, forCellReuseIdentifier: RestaurantTableViewShimmerCell.identifier)
         
         cardsTableView.dataSource = self
         cardsTableView.delegate = self
@@ -119,11 +119,13 @@ extension RestaurantsExampleView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if self.viewModel.cellType.value == .dataCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.cellId) as? RestaurantTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as? RestaurantTableViewCell
             
             var strings = [String() : String()]
             strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.name]!, forKey: Restaurants.Document.name)
             strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.Branches.identifier]!, forKey: Restaurants.Document.Branches.identifier)
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.id]!, forKey: Restaurants.id)
+            strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.Branches.id]!, forKey: Restaurants.Document.Branches.id)
             strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.Document.Branches.Document.Days.openingHours]!, forKey: Restaurants.Document.Branches.Document.Days.openingHours)
             strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.category]!, forKey: Restaurants.category)
             strings.updateValue(self.viewModel.restaurantsCellsData[indexPath.row]![Restaurants.image]!, forKey: Restaurants.image)
@@ -131,11 +133,13 @@ extension RestaurantsExampleView: UITableViewDataSource, UITableViewDelegate {
             cell?.setupCell(imageLink: strings[Restaurants.image]!,
                             restaurantName: strings[Restaurants.Document.name]!,
                             restaurantBranch: strings[Restaurants.Document.Branches.identifier]!,
+                            restaurantID: strings[Restaurants.id]!,
+                            branchID: strings[Restaurants.Document.Branches.id]!,
                             category: strings[Restaurants.category]!,
                             openingHours: strings[Restaurants.Document.Branches.Document.Days.openingHours]!)
             return cell ?? UITableViewCell()
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShimmerRestaurantTableViewCell.cellId) as? ShimmerRestaurantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewShimmerCell.identifier) as? RestaurantTableViewShimmerCell
         return cell ?? UITableViewCell()
     }
     
@@ -145,10 +149,11 @@ extension RestaurantsExampleView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell,
-              let restaurantName = cell.restaurantTitle,
+              let restaurantID = cell.restaurantID,
+              let branchID = cell.branchID,
               let delegate = self.delegate
         else { return }
-        delegate.openRestaurantMenu(name: restaurantName)
+        delegate.openRestaurantMenu(restaurantID: restaurantID, branchID: branchID)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
